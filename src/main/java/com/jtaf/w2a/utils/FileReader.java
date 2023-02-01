@@ -9,17 +9,20 @@ import java.util.Properties;
 public class FileReader {
 
 	public static Properties properties = new Properties();
-	public static File file;
-	public static FileInputStream fileInputStream;
+	public static File configFileObj, ObjectRepoFileObj;
+	public static FileInputStream configfileInputStream, ObjectRepofileInputStream;
 	public static String objectRepoPath = "\\src\\test\\resources\\properties\\objectrepo.properties";
 	public static String configPath = "\\src\\test\\resources\\properties\\config.properties";
 
 	public static void loadPropertyFiles() {
 
-		file = new File(System.getProperty("user.dir") + configPath);
+		configFileObj = new File(System.getProperty("user.dir") + configPath);
+		ObjectRepoFileObj = new File(System.getProperty("user.dir") + objectRepoPath);
 		try {
-			fileInputStream = new FileInputStream(file);
-			properties.load(fileInputStream);
+			configfileInputStream = new FileInputStream(configFileObj);
+			ObjectRepofileInputStream = new FileInputStream(ObjectRepoFileObj);
+			properties.load(configfileInputStream);
+			properties.load(ObjectRepofileInputStream);
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		} catch (IOException e) {
@@ -28,16 +31,16 @@ public class FileReader {
 	}
 
 	public static String getDataFromPropFile(String key) {
-		String data = null;
+		String dataFromPropFile = null;
 		if (key != null && properties != null) {
-			data = properties.getProperty(key).trim();
+			dataFromPropFile = properties.getProperty(key).trim();
 		}
-		return data;
-
+		return dataFromPropFile;
 	}
 
 	public static void main(String[] args) {
 		loadPropertyFiles();
-		System.out.println(getDataFromPropFile("browser"));
+		System.out.println(getDataFromPropFile("url"));
+		System.out.println(getDataFromPropFile("BankManagerLogin"));
 	}
 }
