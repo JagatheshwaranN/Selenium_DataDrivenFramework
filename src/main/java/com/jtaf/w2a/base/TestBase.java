@@ -1,16 +1,41 @@
 package com.jtaf.w2a.base;
 
+import java.time.Duration;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+import com.jtaf.w2a.utils.FileReader;
+
 public class TestBase {
-	
+
 	/**
-	 * WebDriver
-	 * Properites
-	 * Logs
-	 * ExtentReports
-	 * DB
-	 * Excel
-	 * Mail
+	 * WebDriver Properites Logs ExtentReports DB Excel Mail
 	 * 
 	 */
+
+	public static WebDriver driver;
+
+	public static void setUp() {
+		FileReader.loadPropertyFiles();
+		if (FileReader.getDataFromPropFile("browser").equalsIgnoreCase("chrome")) {
+			driver = new ChromeDriver();
+		} else if (FileReader.getDataFromPropFile("browser").equalsIgnoreCase("firefox")) {
+			driver = new FirefoxDriver();
+		}
+		driver.manage().window().maximize();
+		driver.manage().timeouts()
+				.implicitlyWait(Duration.ofMillis(Integer.parseInt(FileReader.getDataFromPropFile("implicit.wait"))));
+		driver.get(FileReader.getDataFromPropFile("url"));
+	}
+
+	public static void setDown() {
+
+	}
+
+	public static void main(String[] args) {
+		setUp();
+	}
 
 }
