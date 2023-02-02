@@ -10,6 +10,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 
+import com.jtaf.w2a.utils.ExcelReader;
 import com.jtaf.w2a.utils.FileReader;
 
 public class TestBase extends FileReader {
@@ -22,7 +23,10 @@ public class TestBase extends FileReader {
 	public static WebDriver driver;
 
 	public static Logger log = Logger.getLogger("devpinoyLogger");
-	
+
+	public static ExcelReader excelReader = new ExcelReader(
+			System.getProperty("user.dir") + "/src/test/resources/excel/testData.xlsx");
+
 	@BeforeSuite
 	public static void setUp() {
 

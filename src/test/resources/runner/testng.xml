@@ -3,7 +3,8 @@
 <suite name="Data Driven Test Automation">
   <test thread-count="1" name="LoginTest">
     <classes>
-      <class name="com.jtaf.w2a.testcases.LoginTest"/>
+      <!-- <class name="com.jtaf.w2a.testcases.BankManagerLoginTest"/> -->
+      <class name="com.jtaf.w2a.testcases.AddCustomerTest"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
