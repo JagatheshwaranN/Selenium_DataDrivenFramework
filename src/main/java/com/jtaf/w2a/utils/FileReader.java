@@ -6,7 +6,11 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Properties;
 
+import org.apache.log4j.Logger;
+
 public class FileReader {
+
+	public static Logger log = Logger.getLogger("devpinoyLogger");
 
 	public static Properties properties = new Properties();
 	public static File configFileObj, ObjectRepoFileObj;
@@ -23,6 +27,7 @@ public class FileReader {
 			ObjectRepofileInputStream = new FileInputStream(ObjectRepoFileObj);
 			properties.load(configfileInputStream);
 			properties.load(ObjectRepofileInputStream);
+			log.debug("Config & Object Repository property files are loadded !!");
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		} catch (IOException e) {

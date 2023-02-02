@@ -2,6 +2,7 @@ package com.jtaf.w2a.base;
 
 import java.time.Duration;
 
+import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
@@ -11,7 +12,7 @@ import org.testng.annotations.BeforeSuite;
 
 import com.jtaf.w2a.utils.FileReader;
 
-public class TestBase {
+public class TestBase extends FileReader {
 
 	/**
 	 * WebDriver Properites Logs ExtentReports DB Excel Mail
@@ -20,21 +21,27 @@ public class TestBase {
 
 	public static WebDriver driver;
 
+	public static Logger log = Logger.getLogger("devpinoyLogger");
+	
 	@BeforeSuite
 	public static void setUp() {
 
 		FileReader.loadPropertyFiles();
-		if (FileReader.getDataFromPropFile("browser").equalsIgnoreCase("chrome")) {
+		if (getDataFromPropFile("browser").equalsIgnoreCase("chrome")) {
 			driver = new ChromeDriver();
-		} else if (FileReader.getDataFromPropFile("browser").equalsIgnoreCase("firefox")) {
+			log.debug(getDataFromPropFile("browser") + " driver started");
+		} else if (getDataFromPropFile("browser").equalsIgnoreCase("firefox")) {
 			driver = new FirefoxDriver();
-		} else if (FileReader.getDataFromPropFile("browser").equalsIgnoreCase("edge")) {
+			log.debug(getDataFromPropFile("browser") + " driver started");
+		} else if (getDataFromPropFile("browser").equalsIgnoreCase("edge")) {
 			driver = new EdgeDriver();
+			log.debug(getDataFromPropFile("browser") + " driver started");
 		}
 		driver.manage().window().maximize();
 		driver.manage().timeouts()
-				.implicitlyWait(Duration.ofMillis(Integer.parseInt(FileReader.getDataFromPropFile("implicit.wait"))));
-		driver.get(FileReader.getDataFromPropFile("url"));
+				.implicitlyWait(Duration.ofMillis(Integer.parseInt(getDataFromPropFile("implicit.wait"))));
+		driver.get(getDataFromPropFile("url"));
+		log.debug("Driver lauches the application " + getDataFromPropFile("url"));
 	}
 
 	@AfterSuite
@@ -42,6 +49,7 @@ public class TestBase {
 
 		if (driver != null) {
 			driver.quit();
+			log.debug("Driver session completed");
 		}
 	}
 
