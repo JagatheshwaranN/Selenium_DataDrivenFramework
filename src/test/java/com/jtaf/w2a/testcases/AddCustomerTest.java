@@ -9,36 +9,35 @@ import com.jtaf.w2a.common.ReusableComponent;
 public class AddCustomerTest extends ReusableComponent {
 
 	@Test(dataProvider = "getData")
-	public void addCustomer(String firstName, String lastName, String postCode) throws InterruptedException {
-		
+	public static void addCustomer(String firstName, String lastName, String postCode) throws InterruptedException {
+
 		driver.findElement(By.cssSelector(getDataFromPropFile("BankManagerLogin"))).click();
 		log.debug("Logged in as Bank Manager");
-		Thread.sleep(5000);
+		Thread.sleep(3000);
 		driver.findElement(By.cssSelector(getDataFromPropFile("AddCustomerButton"))).click();
-		Thread.sleep(5000);
+		Thread.sleep(3000);
 		driver.findElement(By.cssSelector(getDataFromPropFile("AC_FirstName"))).sendKeys(firstName);
 		driver.findElement(By.cssSelector(getDataFromPropFile("AC_LastName"))).sendKeys(lastName);
 		driver.findElement(By.cssSelector(getDataFromPropFile("AC_PostCode"))).sendKeys(postCode);
-		Thread.sleep(5000);
+		Thread.sleep(3000);
 		driver.findElement(By.cssSelector(getDataFromPropFile("AC_AddButton"))).click();
 		Thread.sleep(5000);
-		
 	}
 
 	@DataProvider
-	public Object[][] getData() {
+	public static Object[][] getData() {
 
 		String sheetName = getDataFromPropFile("customerAddTest");
-		System.out.println("sheetName ............."+sheetName);
-		int rowCount = excelReader.getRowCount(sheetName);
-		int colCount = excelReader.getColumnCount(sheetName);
-		Object[][] data = new Object[rowCount - 1][colCount];
-		for (int rownum = 2; rownum <= rowCount; rownum++) {
-			for (int colnum = 0; colnum < colCount; colnum++) {
-				data[rownum - 2][colnum] = excelReader.getCellData(sheetName, colnum, rownum);
+		int totalRows = excelReader.getRowCount(sheetName);
+		int totalCols = excelReader.getColumnCount(sheetName);
+		Object[][] data = new Object[totalRows - 1][totalCols];
+
+		for (int rowNum = 2; rowNum <= totalRows; rowNum++) {
+			for (int colNum = 0; colNum < totalCols; colNum++) {
+				data[rowNum - 2][colNum] = excelReader.getCellData(sheetName, colNum, rowNum);
 			}
 		}
-		System.out.println("control reach before end");
 		return data;
 	}
+
 }
