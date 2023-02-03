@@ -25,6 +25,7 @@ import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 
+@SuppressWarnings("deprecation")
 public class ExcelReader {
 	
 	public  String path;
