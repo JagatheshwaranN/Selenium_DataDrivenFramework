@@ -13,7 +13,10 @@ import org.testng.annotations.AfterTest;
 
 import org.testng.annotations.BeforeTest;
 
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
 import com.jtaf.w2a.utils.ExcelReader;
+import com.jtaf.w2a.utils.ExtentReportUtil;
 import com.jtaf.w2a.utils.FileReader;
 
 public class TestBase extends FileReader {
@@ -30,6 +33,8 @@ public class TestBase extends FileReader {
 	public static ExcelReader excelReader = new ExcelReader(
 			System.getProperty("user.dir") + "/src/test/resources/excel/testData.xlsx");
 	public static WebDriverWait wait;
+	public static ExtentReports report = ExtentReportUtil.getInstance();
+	public static ExtentTest test;
 
 	@BeforeTest
 	public static void setUp() {

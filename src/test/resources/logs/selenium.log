@@ -1,72 +1,173 @@
-03-02-2023 14:02:606 DEBUG devpinoyLogger :30 - Config & Object Repository property files are loadded !!
-03-02-2023 14:02:342 DEBUG InternalLoggerFactory :89 - Using Log4J as the default logging framework
-03-02-2023 14:02:348 DEBUG ResourceLeakDetector :129 - -Dio.netty.leakDetection.level: simple
-03-02-2023 14:02:349 DEBUG ResourceLeakDetector :130 - -Dio.netty.leakDetection.targetRecords: 4
-03-02-2023 14:02:356 DEBUG ResourceLeakDetectorFactory :196 - Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@4fcee388
-03-02-2023 14:02:378 DEBUG PlatformDependent0 :496 - -Dio.netty.noUnsafe: false
-03-02-2023 14:02:379 DEBUG PlatformDependent0 :1000 - Java version: 17
-03-02-2023 14:02:381 DEBUG PlatformDependent0 :137 - sun.misc.Unsafe.theUnsafe: available
-03-02-2023 14:02:383 DEBUG PlatformDependent0 :161 - sun.misc.Unsafe.copyMemory: available
-03-02-2023 14:02:384 DEBUG PlatformDependent0 :193 - sun.misc.Unsafe.storeFence: available
-03-02-2023 14:02:387 DEBUG PlatformDependent0 :236 - java.nio.Buffer.address: available
-03-02-2023 14:02:389 DEBUG PlatformDependent0 :320 - direct buffer constructor: unavailable: Reflective setAccessible(true) disabled
-03-02-2023 14:02:391 DEBUG PlatformDependent0 :385 - java.nio.Bits.unaligned: available, true
-03-02-2023 14:02:393 DEBUG PlatformDependent0 :452 - jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable: class io.netty.util.internal.PlatformDependent0$7 cannot access class jdk.internal.misc.Unsafe (in module java.base) because module java.base does not export jdk.internal.misc to unnamed module @1ed6993a
-03-02-2023 14:02:395 DEBUG PlatformDependent0 :482 - java.nio.DirectByteBuffer.<init>(long, int): unavailable
-03-02-2023 14:02:396 DEBUG PlatformDependent :1159 - sun.misc.Unsafe: available
-03-02-2023 14:02:414 DEBUG PlatformDependent :1270 - maxDirectMemory: 3191865344 bytes (maybe)
-03-02-2023 14:02:415 DEBUG PlatformDependent :1289 - -Dio.netty.tmpdir: C:\Users\JAGATH~1\AppData\Local\Temp (java.io.tmpdir)
-03-02-2023 14:02:415 DEBUG PlatformDependent :1368 - -Dio.netty.bitMode: 64 (sun.arch.data.model)
-03-02-2023 14:02:416 DEBUG PlatformDependent :1119 - Platform: Windows
-03-02-2023 14:02:418 DEBUG PlatformDependent :178 - -Dio.netty.maxDirectMemory: -1 bytes
-03-02-2023 14:02:418 DEBUG PlatformDependent :185 - -Dio.netty.uninitializedArrayAllocationThreshold: -1
-03-02-2023 14:02:421 DEBUG CleanerJava9 :71 - java.nio.ByteBuffer.cleaner(): available
-03-02-2023 14:02:421 DEBUG PlatformDependent :205 - -Dio.netty.noPreferDirect: false
-03-02-2023 14:02:433 DEBUG PlatformDependent :1010 - org.jctools-core.MpscChunkedArrayQueue: available
-03-02-2023 14:02:465 DEBUG InternalThreadLocalMap :100 - -Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
-03-02-2023 14:02:466 DEBUG InternalThreadLocalMap :101 - -Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
-03-02-2023 14:02:859 DEBUG JdkSslContext :83 - Default protocols (JDK): [TLSv1.3, TLSv1.2] 
-03-02-2023 14:02:860 DEBUG JdkSslContext :84 - Default cipher suites (JDK): [TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384, TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA, TLS_RSA_WITH_AES_128_GCM_SHA256, TLS_RSA_WITH_AES_128_CBC_SHA, TLS_RSA_WITH_AES_256_CBC_SHA, TLS_AES_128_GCM_SHA256, TLS_AES_256_GCM_SHA384]
-03-02-2023 14:02:928 DEBUG MultithreadEventLoopGroup :44 - -Dio.netty.eventLoopThreads: 8
-03-02-2023 14:02:949 DEBUG NioEventLoop :110 - -Dio.netty.noKeySetOptimization: false
-03-02-2023 14:02:949 DEBUG NioEventLoop :111 - -Dio.netty.selectorAutoRebuildThreshold: 512
-03-02-2023 14:02:28 DEBUG PooledByteBufAllocator :157 - -Dio.netty.allocator.numHeapArenas: 8
-03-02-2023 14:02:29 DEBUG PooledByteBufAllocator :158 - -Dio.netty.allocator.numDirectArenas: 8
-03-02-2023 14:02:29 DEBUG PooledByteBufAllocator :160 - -Dio.netty.allocator.pageSize: 8192
-03-02-2023 14:02:30 DEBUG PooledByteBufAllocator :165 - -Dio.netty.allocator.maxOrder: 9
-03-02-2023 14:02:30 DEBUG PooledByteBufAllocator :169 - -Dio.netty.allocator.chunkSize: 4194304
-03-02-2023 14:02:30 DEBUG PooledByteBufAllocator :170 - -Dio.netty.allocator.smallCacheSize: 256
-03-02-2023 14:02:31 DEBUG PooledByteBufAllocator :171 - -Dio.netty.allocator.normalCacheSize: 64
-03-02-2023 14:02:31 DEBUG PooledByteBufAllocator :172 - -Dio.netty.allocator.maxCachedBufferCapacity: 32768
-03-02-2023 14:02:31 DEBUG PooledByteBufAllocator :173 - -Dio.netty.allocator.cacheTrimInterval: 8192
-03-02-2023 14:02:31 DEBUG PooledByteBufAllocator :174 - -Dio.netty.allocator.cacheTrimIntervalMillis: 0
-03-02-2023 14:02:32 DEBUG PooledByteBufAllocator :175 - -Dio.netty.allocator.useCacheForAllThreads: false
-03-02-2023 14:02:32 DEBUG PooledByteBufAllocator :176 - -Dio.netty.allocator.maxCachedByteBuffersPerChunk: 1023
-03-02-2023 14:02:51 DEBUG ByteBufUtil :87 - -Dio.netty.allocator.type: pooled
-03-02-2023 14:02:52 DEBUG ByteBufUtil :96 - -Dio.netty.threadLocalDirectBufferSize: 0
-03-02-2023 14:02:52 DEBUG ByteBufUtil :99 - -Dio.netty.maxThreadLocalCharBufferSize: 16384
-03-02-2023 14:02:555 DEBUG DefaultChannelId :79 - -Dio.netty.processId: 8792 (auto-detected)
-03-02-2023 14:02:559 DEBUG NetUtil :142 - -Djava.net.preferIPv4Stack: false
-03-02-2023 14:02:560 DEBUG NetUtil :143 - -Djava.net.preferIPv6Addresses: false
-03-02-2023 14:02:580 DEBUG NetUtilInitializations :139 - Loopback interface: lo (Software Loopback Interface 1, 127.0.0.1)
-03-02-2023 14:02:583 DEBUG NetUtil :200 - Failed to get SOMAXCONN from sysctl and file \proc\sys\net\core\somaxconn. Default: 200
-03-02-2023 14:02:610 DEBUG DefaultChannelId :101 - -Dio.netty.machineId: 0c:96:e6:ff:fe:e2:13:b7 (auto-detected)
-03-02-2023 14:02:687 DEBUG AbstractByteBuf :63 - -Dio.netty.buffer.checkAccessible: true
-03-02-2023 14:02:687 DEBUG AbstractByteBuf :64 - -Dio.netty.buffer.checkBounds: true
-03-02-2023 14:02:688 DEBUG ResourceLeakDetectorFactory :196 - Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@bfadc3c
-03-02-2023 14:02:719 DEBUG Recycler :85 - -Dio.netty.recycler.maxCapacityPerThread: 4096
-03-02-2023 14:02:720 DEBUG Recycler :86 - -Dio.netty.recycler.ratio: 8
-03-02-2023 14:02:720 DEBUG Recycler :87 - -Dio.netty.recycler.chunkSize: 32
-03-02-2023 14:02:721 DEBUG Recycler :88 - -Dio.netty.recycler.blocking: false
-03-02-2023 14:02:862 DEBUG Brotli :38 - brotli4j not in the classpath; Brotli support will be unavailable.
-03-02-2023 14:02:81 DEBUG ThreadLocalRandom :214 - -Dio.netty.initialSeedUniquifier: 0x9d59832091c9d7b4
-03-02-2023 14:02:177 DEBUG devpinoyLogger :40 - Chrome driver started
-03-02-2023 14:02:346 DEBUG devpinoyLogger :53 - Driver lauches the application https://www.way2automation.com/angularjs-protractor/banking/#/login
-03-02-2023 14:02:495 DEBUG devpinoyLogger :15 - Logged in as Bank Manager
-03-02-2023 14:02:536 DEBUG devpinoyLogger :18 - Add Customer Button is available
-03-02-2023 14:02:41 DEBUG devpinoyLogger :61 - Driver session completed
-03-02-2023 14:02:60 DEBUG devpinoyLogger :30 - Config & Object Repository property files are loadded !!
-03-02-2023 14:02:994 DEBUG devpinoyLogger :40 - Chrome driver started
-03-02-2023 14:02:362 DEBUG devpinoyLogger :53 - Driver lauches the application https://www.way2automation.com/angularjs-protractor/banking/#/login
-03-02-2023 14:02:476 DEBUG devpinoyLogger :19 - Logged in as Bank Manager
-03-02-2023 14:02:973 DEBUG devpinoyLogger :61 - Driver session completed
+03-02-2023 17:02:930 DEBUG devpinoyLogger :30 - Config & Object Repository property files are loadded !!
+03-02-2023 17:02:716 DEBUG InternalLoggerFactory :89 - Using Log4J as the default logging framework
+03-02-2023 17:02:720 DEBUG ResourceLeakDetector :129 - -Dio.netty.leakDetection.level: simple
+03-02-2023 17:02:722 DEBUG ResourceLeakDetector :130 - -Dio.netty.leakDetection.targetRecords: 4
+03-02-2023 17:02:728 DEBUG ResourceLeakDetectorFactory :196 - Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@73aff8f1
+03-02-2023 17:02:756 DEBUG PlatformDependent0 :496 - -Dio.netty.noUnsafe: false
+03-02-2023 17:02:757 DEBUG PlatformDependent0 :1000 - Java version: 17
+03-02-2023 17:02:759 DEBUG PlatformDependent0 :137 - sun.misc.Unsafe.theUnsafe: available
+03-02-2023 17:02:761 DEBUG PlatformDependent0 :161 - sun.misc.Unsafe.copyMemory: available
+03-02-2023 17:02:762 DEBUG PlatformDependent0 :193 - sun.misc.Unsafe.storeFence: available
+03-02-2023 17:02:763 DEBUG PlatformDependent0 :236 - java.nio.Buffer.address: available
+03-02-2023 17:02:764 DEBUG PlatformDependent0 :320 - direct buffer constructor: unavailable: Reflective setAccessible(true) disabled
+03-02-2023 17:02:765 DEBUG PlatformDependent0 :385 - java.nio.Bits.unaligned: available, true
+03-02-2023 17:02:767 DEBUG PlatformDependent0 :452 - jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable: class io.netty.util.internal.PlatformDependent0$7 cannot access class jdk.internal.misc.Unsafe (in module java.base) because module java.base does not export jdk.internal.misc to unnamed module @1ed6993a
+03-02-2023 17:02:769 DEBUG PlatformDependent0 :482 - java.nio.DirectByteBuffer.<init>(long, int): unavailable
+03-02-2023 17:02:770 DEBUG PlatformDependent :1159 - sun.misc.Unsafe: available
+03-02-2023 17:02:785 DEBUG PlatformDependent :1270 - maxDirectMemory: 3191865344 bytes (maybe)
+03-02-2023 17:02:786 DEBUG PlatformDependent :1289 - -Dio.netty.tmpdir: C:\Users\JAGATH~1\AppData\Local\Temp (java.io.tmpdir)
+03-02-2023 17:02:786 DEBUG PlatformDependent :1368 - -Dio.netty.bitMode: 64 (sun.arch.data.model)
+03-02-2023 17:02:787 DEBUG PlatformDependent :1119 - Platform: Windows
+03-02-2023 17:02:789 DEBUG PlatformDependent :178 - -Dio.netty.maxDirectMemory: -1 bytes
+03-02-2023 17:02:790 DEBUG PlatformDependent :185 - -Dio.netty.uninitializedArrayAllocationThreshold: -1
+03-02-2023 17:02:791 DEBUG CleanerJava9 :71 - java.nio.ByteBuffer.cleaner(): available
+03-02-2023 17:02:792 DEBUG PlatformDependent :205 - -Dio.netty.noPreferDirect: false
+03-02-2023 17:02:801 DEBUG PlatformDependent :1010 - org.jctools-core.MpscChunkedArrayQueue: available
+03-02-2023 17:02:829 DEBUG InternalThreadLocalMap :100 - -Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
+03-02-2023 17:02:829 DEBUG InternalThreadLocalMap :101 - -Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
+03-02-2023 17:02:248 DEBUG JdkSslContext :83 - Default protocols (JDK): [TLSv1.3, TLSv1.2] 
+03-02-2023 17:02:249 DEBUG JdkSslContext :84 - Default cipher suites (JDK): [TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384, TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA, TLS_RSA_WITH_AES_128_GCM_SHA256, TLS_RSA_WITH_AES_128_CBC_SHA, TLS_RSA_WITH_AES_256_CBC_SHA, TLS_AES_128_GCM_SHA256, TLS_AES_256_GCM_SHA384]
+03-02-2023 17:02:300 DEBUG MultithreadEventLoopGroup :44 - -Dio.netty.eventLoopThreads: 8
+03-02-2023 17:02:314 DEBUG NioEventLoop :110 - -Dio.netty.noKeySetOptimization: false
+03-02-2023 17:02:314 DEBUG NioEventLoop :111 - -Dio.netty.selectorAutoRebuildThreshold: 512
+03-02-2023 17:02:379 DEBUG PooledByteBufAllocator :157 - -Dio.netty.allocator.numHeapArenas: 8
+03-02-2023 17:02:380 DEBUG PooledByteBufAllocator :158 - -Dio.netty.allocator.numDirectArenas: 8
+03-02-2023 17:02:380 DEBUG PooledByteBufAllocator :160 - -Dio.netty.allocator.pageSize: 8192
+03-02-2023 17:02:380 DEBUG PooledByteBufAllocator :165 - -Dio.netty.allocator.maxOrder: 9
+03-02-2023 17:02:381 DEBUG PooledByteBufAllocator :169 - -Dio.netty.allocator.chunkSize: 4194304
+03-02-2023 17:02:381 DEBUG PooledByteBufAllocator :170 - -Dio.netty.allocator.smallCacheSize: 256
+03-02-2023 17:02:382 DEBUG PooledByteBufAllocator :171 - -Dio.netty.allocator.normalCacheSize: 64
+03-02-2023 17:02:382 DEBUG PooledByteBufAllocator :172 - -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+03-02-2023 17:02:382 DEBUG PooledByteBufAllocator :173 - -Dio.netty.allocator.cacheTrimInterval: 8192
+03-02-2023 17:02:382 DEBUG PooledByteBufAllocator :174 - -Dio.netty.allocator.cacheTrimIntervalMillis: 0
+03-02-2023 17:02:383 DEBUG PooledByteBufAllocator :175 - -Dio.netty.allocator.useCacheForAllThreads: false
+03-02-2023 17:02:383 DEBUG PooledByteBufAllocator :176 - -Dio.netty.allocator.maxCachedByteBuffersPerChunk: 1023
+03-02-2023 17:02:397 DEBUG ByteBufUtil :87 - -Dio.netty.allocator.type: pooled
+03-02-2023 17:02:398 DEBUG ByteBufUtil :96 - -Dio.netty.threadLocalDirectBufferSize: 0
+03-02-2023 17:02:398 DEBUG ByteBufUtil :99 - -Dio.netty.maxThreadLocalCharBufferSize: 16384
+03-02-2023 17:02:968 DEBUG DefaultChannelId :79 - -Dio.netty.processId: 13528 (auto-detected)
+03-02-2023 17:02:971 DEBUG NetUtil :142 - -Djava.net.preferIPv4Stack: false
+03-02-2023 17:02:972 DEBUG NetUtil :143 - -Djava.net.preferIPv6Addresses: false
+03-02-2023 17:02:994 DEBUG NetUtilInitializations :139 - Loopback interface: lo (Software Loopback Interface 1, 127.0.0.1)
+03-02-2023 17:02:996 DEBUG NetUtil :200 - Failed to get SOMAXCONN from sysctl and file \proc\sys\net\core\somaxconn. Default: 200
+03-02-2023 17:02:20 DEBUG DefaultChannelId :101 - -Dio.netty.machineId: 0c:96:e6:ff:fe:e2:13:b7 (auto-detected)
+03-02-2023 17:02:115 DEBUG AbstractByteBuf :63 - -Dio.netty.buffer.checkAccessible: true
+03-02-2023 17:02:116 DEBUG AbstractByteBuf :64 - -Dio.netty.buffer.checkBounds: true
+03-02-2023 17:02:117 DEBUG ResourceLeakDetectorFactory :196 - Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@345d9fa2
+03-02-2023 17:02:160 DEBUG Recycler :85 - -Dio.netty.recycler.maxCapacityPerThread: 4096
+03-02-2023 17:02:161 DEBUG Recycler :86 - -Dio.netty.recycler.ratio: 8
+03-02-2023 17:02:161 DEBUG Recycler :87 - -Dio.netty.recycler.chunkSize: 32
+03-02-2023 17:02:161 DEBUG Recycler :88 - -Dio.netty.recycler.blocking: false
+03-02-2023 17:02:729 DEBUG Brotli :38 - brotli4j not in the classpath; Brotli support will be unavailable.
+03-02-2023 17:02:26 DEBUG ThreadLocalRandom :214 - -Dio.netty.initialSeedUniquifier: 0x35be6ef6b40d631c
+03-02-2023 17:02:175 DEBUG devpinoyLogger :45 - Chrome driver started
+03-02-2023 17:02:167 DEBUG devpinoyLogger :58 - Driver lauches the application https://www.way2automation.com/angularjs-protractor/banking/#/login
+03-02-2023 17:02:433 DEBUG devpinoyLogger :15 - Logged in as Bank Manager
+03-02-2023 17:02:479 DEBUG devpinoyLogger :18 - Add Customer Button is available
+03-02-2023 17:02:295 DEBUG devpinoyLogger :66 - Driver session completed
+03-02-2023 17:02:369 DEBUG cache :45 - Couldn't find template in cache for "spark/spark.spa.ftl"("en_US", UTF-8, parsed); will try to load it.
+03-02-2023 17:02:372 DEBUG cache :45 - TemplateLoader.findTemplateSource("spark/spark.spa_en_US.ftl"): Not found
+03-02-2023 17:02:374 DEBUG cache :45 - TemplateLoader.findTemplateSource("spark/spark.spa_en.ftl"): Not found
+03-02-2023 17:02:376 DEBUG cache :45 - TemplateLoader.findTemplateSource("spark/spark.spa.ftl"): Found
+03-02-2023 17:02:377 DEBUG cache :45 - Loading template for "spark/spark.spa.ftl"("en_US", UTF-8, parsed) from "jar:file:/C:/Users/Jagatheshwaran%20N/.m2/repository/com/aventstack/extentreports/5.0.9/extentreports-5.0.9.jar!/com/aventstack/extentreports/templates/spark/spark.spa.ftl"
+03-02-2023 17:02:489 DEBUG cache :45 - Couldn't find template in cache for "commons/commons-variables.ftl"("en_US", UTF-8, parsed); will try to load it.
+03-02-2023 17:02:493 DEBUG cache :45 - TemplateLoader.findTemplateSource("commons/commons-variables_en_US.ftl"): Not found
+03-02-2023 17:02:494 DEBUG cache :45 - TemplateLoader.findTemplateSource("commons/commons-variables_en.ftl"): Not found
+03-02-2023 17:02:495 DEBUG cache :45 - TemplateLoader.findTemplateSource("commons/commons-variables.ftl"): Found
+03-02-2023 17:02:496 DEBUG cache :45 - Loading template for "commons/commons-variables.ftl"("en_US", UTF-8, parsed) from "jar:file:/C:/Users/Jagatheshwaran%20N/.m2/repository/com/aventstack/extentreports/5.0.9/extentreports-5.0.9.jar!/com/aventstack/extentreports/templates/commons/commons-variables.ftl"
+03-02-2023 17:02:722 DEBUG cache :45 - Couldn't find template in cache for "commons/commons-macros.ftl"("en_US", UTF-8, parsed); will try to load it.
+03-02-2023 17:02:724 DEBUG cache :45 - TemplateLoader.findTemplateSource("commons/commons-macros_en_US.ftl"): Not found
+03-02-2023 17:02:732 DEBUG cache :45 - TemplateLoader.findTemplateSource("commons/commons-macros_en.ftl"): Not found
+03-02-2023 17:02:733 DEBUG cache :45 - TemplateLoader.findTemplateSource("commons/commons-macros.ftl"): Found
+03-02-2023 17:02:733 DEBUG cache :45 - Loading template for "commons/commons-macros.ftl"("en_US", UTF-8, parsed) from "jar:file:/C:/Users/Jagatheshwaran%20N/.m2/repository/com/aventstack/extentreports/5.0.9/extentreports-5.0.9.jar!/com/aventstack/extentreports/templates/commons/commons-macros.ftl"
+03-02-2023 17:02:743 DEBUG cache :45 - Couldn't find template in cache for "spark/macros/attributes.ftl"("en_US", UTF-8, parsed); will try to load it.
+03-02-2023 17:02:744 DEBUG cache :45 - TemplateLoader.findTemplateSource("spark/macros/attributes_en_US.ftl"): Not found
+03-02-2023 17:02:745 DEBUG cache :45 - TemplateLoader.findTemplateSource("spark/macros/attributes_en.ftl"): Not found
+03-02-2023 17:02:747 DEBUG cache :45 - TemplateLoader.findTemplateSource("spark/macros/attributes.ftl"): Found
+03-02-2023 17:02:747 DEBUG cache :45 - Loading template for "spark/macros/attributes.ftl"("en_US", UTF-8, parsed) from "jar:file:/C:/Users/Jagatheshwaran%20N/.m2/repository/com/aventstack/extentreports/5.0.9/extentreports-5.0.9.jar!/com/aventstack/extentreports/templates/spark/macros/attributes.ftl"
+03-02-2023 17:02:751 DEBUG cache :45 - Couldn't find template in cache for "spark/macros/log.ftl"("en_US", UTF-8, parsed); will try to load it.
+03-02-2023 17:02:752 DEBUG cache :45 - TemplateLoader.findTemplateSource("spark/macros/log_en_US.ftl"): Not found
+03-02-2023 17:02:754 DEBUG cache :45 - TemplateLoader.findTemplateSource("spark/macros/log_en.ftl"): Not found
+03-02-2023 17:02:755 DEBUG cache :45 - TemplateLoader.findTemplateSource("spark/macros/log.ftl"): Found
+03-02-2023 17:02:756 DEBUG cache :45 - Loading template for "spark/macros/log.ftl"("en_US", UTF-8, parsed) from "jar:file:/C:/Users/Jagatheshwaran%20N/.m2/repository/com/aventstack/extentreports/5.0.9/extentreports-5.0.9.jar!/com/aventstack/extentreports/templates/spark/macros/log.ftl"
+03-02-2023 17:02:760 DEBUG cache :45 - Couldn't find template in cache for "spark/macros/recurse_nodes.ftl"("en_US", UTF-8, parsed); will try to load it.
+03-02-2023 17:02:762 DEBUG cache :45 - TemplateLoader.findTemplateSource("spark/macros/recurse_nodes_en_US.ftl"): Not found
+03-02-2023 17:02:763 DEBUG cache :45 - TemplateLoader.findTemplateSource("spark/macros/recurse_nodes_en.ftl"): Not found
+03-02-2023 17:02:764 DEBUG cache :45 - TemplateLoader.findTemplateSource("spark/macros/recurse_nodes.ftl"): Found
+03-02-2023 17:02:764 DEBUG cache :45 - Loading template for "spark/macros/recurse_nodes.ftl"("en_US", UTF-8, parsed) from "jar:file:/C:/Users/Jagatheshwaran%20N/.m2/repository/com/aventstack/extentreports/5.0.9/extentreports-5.0.9.jar!/com/aventstack/extentreports/templates/spark/macros/recurse_nodes.ftl"
+03-02-2023 17:02:786 DEBUG cache :45 - "spark/macros/log.ftl"("en_US", UTF-8, parsed) cached copy not yet stale; using cached.
+03-02-2023 17:02:786 DEBUG cache :45 - Couldn't find template in cache for "spark/macros/attr-common.ftl"("en_US", UTF-8, parsed); will try to load it.
+03-02-2023 17:02:796 DEBUG cache :45 - TemplateLoader.findTemplateSource("spark/macros/attr-common_en_US.ftl"): Not found
+03-02-2023 17:02:798 DEBUG cache :45 - TemplateLoader.findTemplateSource("spark/macros/attr-common_en.ftl"): Not found
+03-02-2023 17:02:799 DEBUG cache :45 - TemplateLoader.findTemplateSource("spark/macros/attr-common.ftl"): Found
+03-02-2023 17:02:799 DEBUG cache :45 - Loading template for "spark/macros/attr-common.ftl"("en_US", UTF-8, parsed) from "jar:file:/C:/Users/Jagatheshwaran%20N/.m2/repository/com/aventstack/extentreports/5.0.9/extentreports-5.0.9.jar!/com/aventstack/extentreports/templates/spark/macros/attr-common.ftl"
+03-02-2023 17:02:817 DEBUG cache :45 - Couldn't find template in cache for "spark/partials/head.ftl"("en_US", UTF-8, parsed); will try to load it.
+03-02-2023 17:02:826 DEBUG cache :45 - TemplateLoader.findTemplateSource("spark/partials/head_en_US.ftl"): Not found
+03-02-2023 17:02:834 DEBUG cache :45 - TemplateLoader.findTemplateSource("spark/partials/head_en.ftl"): Not found
+03-02-2023 17:02:840 DEBUG cache :45 - TemplateLoader.findTemplateSource("spark/partials/head.ftl"): Found
+03-02-2023 17:02:842 DEBUG cache :45 - Loading template for "spark/partials/head.ftl"("en_US", UTF-8, parsed) from "jar:file:/C:/Users/Jagatheshwaran%20N/.m2/repository/com/aventstack/extentreports/5.0.9/extentreports-5.0.9.jar!/com/aventstack/extentreports/templates/spark/partials/head.ftl"
+03-02-2023 17:02:849 DEBUG cache :45 - Couldn't find template in cache for "commons/commons-inject-css.ftl"("en_US", UTF-8, parsed); will try to load it.
+03-02-2023 17:02:851 DEBUG cache :45 - TemplateLoader.findTemplateSource("commons/commons-inject-css_en_US.ftl"): Not found
+03-02-2023 17:02:852 DEBUG cache :45 - TemplateLoader.findTemplateSource("commons/commons-inject-css_en.ftl"): Not found
+03-02-2023 17:02:853 DEBUG cache :45 - TemplateLoader.findTemplateSource("commons/commons-inject-css.ftl"): Found
+03-02-2023 17:02:855 DEBUG cache :45 - Loading template for "commons/commons-inject-css.ftl"("en_US", UTF-8, parsed) from "jar:file:/C:/Users/Jagatheshwaran%20N/.m2/repository/com/aventstack/extentreports/5.0.9/extentreports-5.0.9.jar!/com/aventstack/extentreports/templates/commons/commons-inject-css.ftl"
+03-02-2023 17:02:857 DEBUG cache :45 - Couldn't find template in cache for "spark/partials/navbar.ftl"("en_US", UTF-8, parsed); will try to load it.
+03-02-2023 17:02:858 DEBUG cache :45 - TemplateLoader.findTemplateSource("spark/partials/navbar_en_US.ftl"): Not found
+03-02-2023 17:02:860 DEBUG cache :45 - TemplateLoader.findTemplateSource("spark/partials/navbar_en.ftl"): Not found
+03-02-2023 17:02:861 DEBUG cache :45 - TemplateLoader.findTemplateSource("spark/partials/navbar.ftl"): Found
+03-02-2023 17:02:862 DEBUG cache :45 - Loading template for "spark/partials/navbar.ftl"("en_US", UTF-8, parsed) from "jar:file:/C:/Users/Jagatheshwaran%20N/.m2/repository/com/aventstack/extentreports/5.0.9/extentreports-5.0.9.jar!/com/aventstack/extentreports/templates/spark/partials/navbar.ftl"
+03-02-2023 17:02:873 DEBUG cache :45 - Couldn't find template in cache for "spark/partials/sidenav.ftl"("en_US", UTF-8, parsed); will try to load it.
+03-02-2023 17:02:874 DEBUG cache :45 - TemplateLoader.findTemplateSource("spark/partials/sidenav_en_US.ftl"): Not found
+03-02-2023 17:02:875 DEBUG cache :45 - TemplateLoader.findTemplateSource("spark/partials/sidenav_en.ftl"): Not found
+03-02-2023 17:02:877 DEBUG cache :45 - TemplateLoader.findTemplateSource("spark/partials/sidenav.ftl"): Found
+03-02-2023 17:02:877 DEBUG cache :45 - Loading template for "spark/partials/sidenav.ftl"("en_US", UTF-8, parsed) from "jar:file:/C:/Users/Jagatheshwaran%20N/.m2/repository/com/aventstack/extentreports/5.0.9/extentreports-5.0.9.jar!/com/aventstack/extentreports/templates/spark/partials/sidenav.ftl"
+03-02-2023 17:02:907 DEBUG cache :45 - Couldn't find template in cache for "spark/partials/test.ftl"("en_US", UTF-8, parsed); will try to load it.
+03-02-2023 17:02:909 DEBUG cache :45 - TemplateLoader.findTemplateSource("spark/partials/test_en_US.ftl"): Not found
+03-02-2023 17:02:910 DEBUG cache :45 - TemplateLoader.findTemplateSource("spark/partials/test_en.ftl"): Not found
+03-02-2023 17:02:911 DEBUG cache :45 - TemplateLoader.findTemplateSource("spark/partials/test.ftl"): Found
+03-02-2023 17:02:912 DEBUG cache :45 - Loading template for "spark/partials/test.ftl"("en_US", UTF-8, parsed) from "jar:file:/C:/Users/Jagatheshwaran%20N/.m2/repository/com/aventstack/extentreports/5.0.9/extentreports-5.0.9.jar!/com/aventstack/extentreports/templates/spark/partials/test.ftl"
+03-02-2023 17:02:935 DEBUG cache :45 - Couldn't find template in cache for "spark/partials/standard-content.ftl"("en_US", UTF-8, parsed); will try to load it.
+03-02-2023 17:02:937 DEBUG cache :45 - TemplateLoader.findTemplateSource("spark/partials/standard-content_en_US.ftl"): Not found
+03-02-2023 17:02:940 DEBUG cache :45 - TemplateLoader.findTemplateSource("spark/partials/standard-content_en.ftl"): Not found
+03-02-2023 17:02:941 DEBUG cache :45 - TemplateLoader.findTemplateSource("spark/partials/standard-content.ftl"): Found
+03-02-2023 17:02:941 DEBUG cache :45 - Loading template for "spark/partials/standard-content.ftl"("en_US", UTF-8, parsed) from "jar:file:/C:/Users/Jagatheshwaran%20N/.m2/repository/com/aventstack/extentreports/5.0.9/extentreports-5.0.9.jar!/com/aventstack/extentreports/templates/spark/partials/standard-content.ftl"
+03-02-2023 17:02:954 DEBUG cache :45 - Couldn't find template in cache for "spark/partials/exception.ftl"("en_US", UTF-8, parsed); will try to load it.
+03-02-2023 17:02:955 DEBUG cache :45 - TemplateLoader.findTemplateSource("spark/partials/exception_en_US.ftl"): Not found
+03-02-2023 17:02:957 DEBUG cache :45 - TemplateLoader.findTemplateSource("spark/partials/exception_en.ftl"): Not found
+03-02-2023 17:02:958 DEBUG cache :45 - TemplateLoader.findTemplateSource("spark/partials/exception.ftl"): Found
+03-02-2023 17:02:958 DEBUG cache :45 - Loading template for "spark/partials/exception.ftl"("en_US", UTF-8, parsed) from "jar:file:/C:/Users/Jagatheshwaran%20N/.m2/repository/com/aventstack/extentreports/5.0.9/extentreports-5.0.9.jar!/com/aventstack/extentreports/templates/spark/partials/exception.ftl"
+03-02-2023 17:02:959 DEBUG cache :45 - Couldn't find template in cache for "spark/partials/category.ftl"("en_US", UTF-8, parsed); will try to load it.
+03-02-2023 17:02:960 DEBUG cache :45 - TemplateLoader.findTemplateSource("spark/partials/category_en_US.ftl"): Not found
+03-02-2023 17:02:961 DEBUG cache :45 - TemplateLoader.findTemplateSource("spark/partials/category_en.ftl"): Not found
+03-02-2023 17:02:962 DEBUG cache :45 - TemplateLoader.findTemplateSource("spark/partials/category.ftl"): Found
+03-02-2023 17:02:963 DEBUG cache :45 - Loading template for "spark/partials/category.ftl"("en_US", UTF-8, parsed) from "jar:file:/C:/Users/Jagatheshwaran%20N/.m2/repository/com/aventstack/extentreports/5.0.9/extentreports-5.0.9.jar!/com/aventstack/extentreports/templates/spark/partials/category.ftl"
+03-02-2023 17:02:967 DEBUG cache :45 - Couldn't find template in cache for "spark/partials/device.ftl"("en_US", UTF-8, parsed); will try to load it.
+03-02-2023 17:02:969 DEBUG cache :45 - TemplateLoader.findTemplateSource("spark/partials/device_en_US.ftl"): Not found
+03-02-2023 17:02:969 DEBUG cache :45 - TemplateLoader.findTemplateSource("spark/partials/device_en.ftl"): Not found
+03-02-2023 17:02:970 DEBUG cache :45 - TemplateLoader.findTemplateSource("spark/partials/device.ftl"): Found
+03-02-2023 17:02:971 DEBUG cache :45 - Loading template for "spark/partials/device.ftl"("en_US", UTF-8, parsed) from "jar:file:/C:/Users/Jagatheshwaran%20N/.m2/repository/com/aventstack/extentreports/5.0.9/extentreports-5.0.9.jar!/com/aventstack/extentreports/templates/spark/partials/device.ftl"
+03-02-2023 17:02:973 DEBUG cache :45 - Couldn't find template in cache for "spark/partials/author.ftl"("en_US", UTF-8, parsed); will try to load it.
+03-02-2023 17:02:974 DEBUG cache :45 - TemplateLoader.findTemplateSource("spark/partials/author_en_US.ftl"): Not found
+03-02-2023 17:02:975 DEBUG cache :45 - TemplateLoader.findTemplateSource("spark/partials/author_en.ftl"): Not found
+03-02-2023 17:02:976 DEBUG cache :45 - TemplateLoader.findTemplateSource("spark/partials/author.ftl"): Found
+03-02-2023 17:02:976 DEBUG cache :45 - Loading template for "spark/partials/author.ftl"("en_US", UTF-8, parsed) from "jar:file:/C:/Users/Jagatheshwaran%20N/.m2/repository/com/aventstack/extentreports/5.0.9/extentreports-5.0.9.jar!/com/aventstack/extentreports/templates/spark/partials/author.ftl"
+03-02-2023 17:02:977 DEBUG cache :45 - Couldn't find template in cache for "spark/partials/log.ftl"("en_US", UTF-8, parsed); will try to load it.
+03-02-2023 17:02:978 DEBUG cache :45 - TemplateLoader.findTemplateSource("spark/partials/log_en_US.ftl"): Not found
+03-02-2023 17:02:979 DEBUG cache :45 - TemplateLoader.findTemplateSource("spark/partials/log_en.ftl"): Not found
+03-02-2023 17:02:980 DEBUG cache :45 - TemplateLoader.findTemplateSource("spark/partials/log.ftl"): Found
+03-02-2023 17:02:980 DEBUG cache :45 - Loading template for "spark/partials/log.ftl"("en_US", UTF-8, parsed) from "jar:file:/C:/Users/Jagatheshwaran%20N/.m2/repository/com/aventstack/extentreports/5.0.9/extentreports-5.0.9.jar!/com/aventstack/extentreports/templates/spark/partials/log.ftl"
+03-02-2023 17:02:983 DEBUG cache :45 - Couldn't find template in cache for "spark/partials/dashboard.ftl"("en_US", UTF-8, parsed); will try to load it.
+03-02-2023 17:02:985 DEBUG cache :45 - TemplateLoader.findTemplateSource("spark/partials/dashboard_en_US.ftl"): Not found
+03-02-2023 17:02:986 DEBUG cache :45 - TemplateLoader.findTemplateSource("spark/partials/dashboard_en.ftl"): Not found
+03-02-2023 17:02:989 DEBUG cache :45 - TemplateLoader.findTemplateSource("spark/partials/dashboard.ftl"): Found
+03-02-2023 17:02:989 DEBUG cache :45 - Loading template for "spark/partials/dashboard.ftl"("en_US", UTF-8, parsed) from "jar:file:/C:/Users/Jagatheshwaran%20N/.m2/repository/com/aventstack/extentreports/5.0.9/extentreports-5.0.9.jar!/com/aventstack/extentreports/templates/spark/partials/dashboard.ftl"
+03-02-2023 17:02:107 DEBUG cache :45 - Couldn't find template in cache for "spark/partials/scripts.ftl"("en_US", UTF-8, parsed); will try to load it.
+03-02-2023 17:02:108 DEBUG cache :45 - TemplateLoader.findTemplateSource("spark/partials/scripts_en_US.ftl"): Not found
+03-02-2023 17:02:110 DEBUG cache :45 - TemplateLoader.findTemplateSource("spark/partials/scripts_en.ftl"): Not found
+03-02-2023 17:02:111 DEBUG cache :45 - TemplateLoader.findTemplateSource("spark/partials/scripts.ftl"): Found
+03-02-2023 17:02:112 DEBUG cache :45 - Loading template for "spark/partials/scripts.ftl"("en_US", UTF-8, parsed) from "jar:file:/C:/Users/Jagatheshwaran%20N/.m2/repository/com/aventstack/extentreports/5.0.9/extentreports-5.0.9.jar!/com/aventstack/extentreports/templates/spark/partials/scripts.ftl"
+03-02-2023 17:02:114 DEBUG cache :45 - Couldn't find template in cache for "commons/commons-inject-js.ftl"("en_US", UTF-8, parsed); will try to load it.
+03-02-2023 17:02:115 DEBUG cache :45 - TemplateLoader.findTemplateSource("commons/commons-inject-js_en_US.ftl"): Not found
+03-02-2023 17:02:116 DEBUG cache :45 - TemplateLoader.findTemplateSource("commons/commons-inject-js_en.ftl"): Not found
+03-02-2023 17:02:117 DEBUG cache :45 - TemplateLoader.findTemplateSource("commons/commons-inject-js.ftl"): Found
+03-02-2023 17:02:117 DEBUG cache :45 - Loading template for "commons/commons-inject-js.ftl"("en_US", UTF-8, parsed) from "jar:file:/C:/Users/Jagatheshwaran%20N/.m2/repository/com/aventstack/extentreports/5.0.9/extentreports-5.0.9.jar!/com/aventstack/extentreports/templates/commons/commons-inject-js.ftl"
