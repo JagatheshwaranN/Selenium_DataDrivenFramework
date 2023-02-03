@@ -1,6 +1,5 @@
 package com.jtaf.w2a.testcases;
 
-import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.Reporter;
 import org.testng.annotations.Test;
@@ -11,10 +10,10 @@ public class BankManagerLoginTest extends ReusableComponent {
 	@Test
 	public void LoginAsManager() throws InterruptedException {
 
-		driver.findElement(By.cssSelector(getDataFromPropFile("BankManagerLogin"))).click();
+		elementClick("BankManagerLogin");
 		log.debug("Logged in as Bank Manager");
 		Thread.sleep(5000);
-		Assert.assertTrue(isElementPresent(By.cssSelector(getDataFromPropFile("AddCustomerButton"))));
+		Assert.assertTrue(isElementPresent("AddCustomerButton"));
 		log.debug("Add Customer Button is available");
 		Reporter.log("Logged in as Bank Manager is successful");
 	}

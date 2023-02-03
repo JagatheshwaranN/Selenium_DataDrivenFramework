@@ -11,17 +11,35 @@ import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 
+import com.aventstack.extentreports.Status;
 import com.jtaf.w2a.base.TestBase;
 
 public class ReusableComponent extends TestBase {
 
-	public static boolean isElementPresent(By object) {
+	public static boolean isElementPresent(String key) {
 
 		try {
-			driver.findElement(object);
+			driver.findElement(By.cssSelector(getDataFromPropFile(key)));
+			test.log(Status.INFO, key + " is present on the page");
 			return true;
 		} catch (NoSuchElementException ex) {
 			return false;
+		}
+	}
+
+	public static void elementClick(String key) {
+
+		if (key != null) {
+			driver.findElement(By.cssSelector(getDataFromPropFile(key))).click();
+			test.log(Status.INFO, "Clicked on the " + key);
+		}
+	}
+
+	public static void elementType(String key, String value) {
+
+		if (key != null) {
+			driver.findElement(By.cssSelector(getDataFromPropFile(key))).sendKeys(value);
+			test.log(Status.INFO, "Typed into " + key + " with value as " + value);
 		}
 	}
 

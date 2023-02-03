@@ -1,7 +1,6 @@
 package com.jtaf.w2a.testcases;
 
 import org.openqa.selenium.Alert;
-import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 import org.testng.Reporter;
@@ -13,20 +12,21 @@ import com.jtaf.w2a.common.ReusableComponent;
 public class AddCustomerTest extends ReusableComponent {
 
 	@Test(dataProvider = "getData")
-	public static void addCustomer(String firstName, String lastName, String postCode, String successMessage) throws InterruptedException {
+	public static void addCustomer(String firstName, String lastName, String postCode, String successMessage)
+			throws InterruptedException {
 
-		driver.findElement(By.cssSelector(getDataFromPropFile("BankManagerLogin"))).click();
+		elementClick("BankManagerLogin");
 		log.debug("Logged in as Bank Manager");
 		Reporter.log("Logged in as Bank Manager is successful");
 		Thread.sleep(3000);
-		driver.findElement(By.cssSelector(getDataFromPropFile("AddCustomerButton"))).click();
+		elementClick("AddCustomerButton");
 		Thread.sleep(3000);
 		Reporter.log("Navigated to Add Customer Page");
-		driver.findElement(By.cssSelector(getDataFromPropFile("AC_FirstName"))).sendKeys(firstName);
-		driver.findElement(By.cssSelector(getDataFromPropFile("AC_LastName"))).sendKeys(lastName);
-		driver.findElement(By.cssSelector(getDataFromPropFile("AC_PostCode"))).sendKeys(postCode);
+		elementType("AC_FirstName", firstName);
+		elementType("AC_LastName", lastName);
+		elementType("AC_PostCode", postCode);
 		Thread.sleep(3000);
-		driver.findElement(By.cssSelector(getDataFromPropFile("AC_AddButton"))).click();
+		elementClick("AC_AddButton");
 		Alert alertObj = wait.until(ExpectedConditions.alertIsPresent());
 		Assert.assertTrue(alertObj.getText().contains(successMessage));
 		alertObj.accept();
