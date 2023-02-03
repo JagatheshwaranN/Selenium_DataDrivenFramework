@@ -9,28 +9,27 @@ import org.testng.annotations.Test;
 import com.jtaf.w2a.common.ReusableComponent;
 import com.jtaf.w2a.utils.TestUtil;
 
-public class AddCustomerTest extends ReusableComponent {
+public class OpenAccountTest extends ReusableComponent {
 
 	@Test(dataProviderClass = TestUtil.class, dataProvider = "dataFetch")
-	public static void addCustomerFlow(String firstName, String lastName, String postCode, String successMessage)
+	public static void openAccountFlow(String customerName, String currencyType, String successMessage)
 			throws InterruptedException {
 
 		elementClick("BankManagerLogin");
 		log.debug("Logged in as Bank Manager");
 		Reporter.log("Logged in as Bank Manager is successful");
 		Thread.sleep(3000);
-		elementClick("AddCustomerButton");
+		elementClick("OpenAccountButton");
 		Thread.sleep(3000);
-		Reporter.log("Navigated to Add Customer page");
-		elementType("AC_FirstName", firstName);
-		elementType("AC_LastName", lastName);
-		elementType("AC_PostCode", postCode);
+		Reporter.log("Navigated to Open Account page");
+		elementSelect("OA_Customer", "OA_Customer_Options", customerName);
+		elementSelect("OA_Currency", currencyType);
 		Thread.sleep(3000);
-		elementClick("AC_AddButton");
+		elementClick("OA_Process");
 		Alert alertObj = wait.until(ExpectedConditions.alertIsPresent());
 		Assert.assertTrue(alertObj.getText().contains(successMessage));
 		alertObj.accept();
 		Thread.sleep(3000);
-		Reporter.log("Add Customer is successful");
+		Reporter.log("Open Account is successful");
 	}
 }

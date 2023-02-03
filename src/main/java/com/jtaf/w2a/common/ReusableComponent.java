@@ -4,12 +4,15 @@ import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.List;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.Select;
 
 import com.aventstack.extentreports.Status;
 import com.jtaf.w2a.base.TestBase;
@@ -40,6 +43,42 @@ public class ReusableComponent extends TestBase {
 		if (key != null) {
 			driver.findElement(By.cssSelector(getDataFromPropFile(key))).sendKeys(value);
 			test.log(Status.INFO, "Typed into " + key + " with value as " + value);
+		}
+	}
+
+	public static void elementSelect(String key, String value) {
+
+		if (key != null) {
+			Select select = new Select(driver.findElement(By.cssSelector(getDataFromPropFile(key))));
+			select.selectByVisibleText(value);
+			test.log(Status.INFO, "Selected " + value + " in the dropdown " + key);
+		}
+	}
+
+	public static void elementSelect(String key, int index) {
+
+		if (key != null) {
+			Select select = new Select(driver.findElement(By.cssSelector(getDataFromPropFile(key))));
+			select.selectByIndex(index);
+			test.log(Status.INFO, "Selected " + index + " in the dropdown " + key);
+		}
+	}
+
+	public static void elementSelect(String key1, String key2, String value) {
+
+		driver.findElement(By.cssSelector(getDataFromPropFile(key1))).click();
+		List<WebElement> options = driver.findElements(By.cssSelector(getDataFromPropFile(key2)));
+		boolean flag = false;
+		for (WebElement option : options) {
+			if (option.getText().equalsIgnoreCase(value)) {
+				flag = true;
+				option.click();
+				test.log(Status.INFO, "Selected " + value + " in the dropdown " + key1);
+				break;
+			}
+		}
+		if (flag == false) {
+			System.out.println(flag + "-" + value + " option not found on the " + key1);
 		}
 	}
 
