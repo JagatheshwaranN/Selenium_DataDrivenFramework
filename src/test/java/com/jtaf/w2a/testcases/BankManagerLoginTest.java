@@ -10,6 +10,7 @@ public class BankManagerLoginTest extends ReusableComponent {
 	@Test
 	public void LoginAsManager() throws InterruptedException {
 
+		verifyEquals("ABC Bank", "XYZ Bank");
 		elementClick("BankManagerLogin");
 		log.debug("Logged in as Bank Manager");
 		Thread.sleep(5000);

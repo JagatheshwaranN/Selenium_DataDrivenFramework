@@ -13,6 +13,8 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
+import org.testng.Assert;
+import org.testng.Reporter;
 
 import com.aventstack.extentreports.Status;
 import com.jtaf.w2a.base.TestBase;
@@ -96,6 +98,21 @@ public class ReusableComponent extends TestBase {
 			e.printStackTrace();
 		}
 		return destination.getAbsolutePath();
+	}
+
+	public static void verifyEquals(String actual, String expected) {
+
+		try {
+			Assert.assertEquals(actual, expected);
+		} catch (Throwable ex) {
+			captureSnapShot();
+			Reporter.log("<br>" + " Verification Failure : " + ex.getMessage() + "<br>");
+			Reporter.log("<a target='_blank' href='" + captureSnapShot() + "'><img src='" + captureSnapShot()
+					+ "' height='100' width='100'/></a>");
+			Reporter.log("<br>");
+			test.log(Status.FAIL, "Verification Failure : " + ex.getMessage());
+			test.addScreenCaptureFromPath(captureSnapShot());
+		}
 	}
 
 }
