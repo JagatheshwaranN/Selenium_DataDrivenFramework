@@ -402,6 +402,7 @@ public class ExcelReader {
 		sheet=workbook.getSheet(sheetName);
 		XSSFCellStyle style = workbook.createCellStyle();
 		style.setFillForegroundColor(HSSFColor.HSSFColorPredefined.GREY_40_PERCENT.getIndex());
+		@SuppressWarnings("unused")
 		XSSFCreationHelper createHelper = workbook.getCreationHelper();
 		style.setFillPattern(FillPatternType.NO_FILL);
 		

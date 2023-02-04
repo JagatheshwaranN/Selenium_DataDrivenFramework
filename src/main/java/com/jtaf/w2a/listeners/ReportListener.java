@@ -41,7 +41,7 @@ public class ReportListener extends ReusableComponent implements ITestListener {
 
 	public void onTestSkipped(ITestResult result) {
 
-		test.log(Status.SKIP, result.getThrowable());
+		test.log(Status.SKIP, result.getName().toUpperCase() + " SKIPPED. As the RunMode is set to N");
 	}
 
 	public void onTestFailedButWithinSuccessPercentage(ITestResult result) {
