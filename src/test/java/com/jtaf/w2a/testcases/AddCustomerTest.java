@@ -15,10 +15,10 @@ public class AddCustomerTest extends ReusableComponent {
 	public static void addCustomerFlow(String firstName, String lastName, String postCode, String successMessage)
 			throws InterruptedException {
 
-		elementClick("BankManagerLogin");
-		log.debug("Logged in as Bank Manager");
-		Reporter.log("Logged in as Bank Manager is successful");
-		Thread.sleep(3000);
+//		elementClick("BankManagerLogin");
+//		log.debug("Logged in as Bank Manager");
+//		Reporter.log("Logged in as Bank Manager is successful");
+//		Thread.sleep(3000);
 		elementClick("AddCustomerButton");
 		Thread.sleep(3000);
 		Reporter.log("Navigated to Add Customer page");

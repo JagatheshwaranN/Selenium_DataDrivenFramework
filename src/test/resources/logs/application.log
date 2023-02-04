@@ -1,16 +1,6 @@
-03-02-2023 22:02:710 DEBUG devpinoyLogger :30 - Config & Object Repository property files are loadded !!
-03-02-2023 22:02:707 DEBUG devpinoyLogger :45 - Chrome driver started
-03-02-2023 22:02:560 DEBUG devpinoyLogger :58 - Driver lauches the application https://www.way2automation.com/angularjs-protractor/banking/#/login
-03-02-2023 22:02:217 DEBUG devpinoyLogger :15 - Logged in as Bank Manager
-03-02-2023 22:02:240 DEBUG devpinoyLogger :18 - Add Customer Button is available
-03-02-2023 22:02:974 DEBUG devpinoyLogger :66 - Driver session completed
-03-02-2023 22:02:997 DEBUG devpinoyLogger :30 - Config & Object Repository property files are loadded !!
-03-02-2023 22:02:693 DEBUG devpinoyLogger :45 - Chrome driver started
-03-02-2023 22:02:959 DEBUG devpinoyLogger :58 - Driver lauches the application https://www.way2automation.com/angularjs-protractor/banking/#/login
-03-02-2023 22:02:60 DEBUG devpinoyLogger :19 - Logged in as Bank Manager
-03-02-2023 22:02:443 DEBUG devpinoyLogger :66 - Driver session completed
-03-02-2023 22:02:580 DEBUG devpinoyLogger :30 - Config & Object Repository property files are loadded !!
-03-02-2023 22:02:132 DEBUG devpinoyLogger :45 - Chrome driver started
-03-02-2023 22:02:381 DEBUG devpinoyLogger :58 - Driver lauches the application https://www.way2automation.com/angularjs-protractor/banking/#/login
-03-02-2023 22:02:485 DEBUG devpinoyLogger :19 - Logged in as Bank Manager
-03-02-2023 22:02:824 DEBUG devpinoyLogger :66 - Driver session completed
+04-02-2023 11:02:276 DEBUG devpinoyLogger :30 - Config & Object Repository property files are loadded !!
+04-02-2023 11:02:420 DEBUG devpinoyLogger :45 - Chrome driver started
+04-02-2023 11:02:736 DEBUG devpinoyLogger :58 - Driver lauches the application https://www.way2automation.com/angularjs-protractor/banking/#/login
+04-02-2023 11:02:628 DEBUG devpinoyLogger :15 - Logged in as Bank Manager
+04-02-2023 11:02:659 DEBUG devpinoyLogger :18 - Add Customer Button is available
+04-02-2023 11:02:591 DEBUG devpinoyLogger :66 - Driver session completed

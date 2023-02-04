@@ -15,10 +15,10 @@ public class OpenAccountTest extends ReusableComponent {
 	public static void openAccountFlow(String customerName, String currencyType, String successMessage)
 			throws InterruptedException {
 
-		elementClick("BankManagerLogin");
-		log.debug("Logged in as Bank Manager");
-		Reporter.log("Logged in as Bank Manager is successful");
-		Thread.sleep(3000);
+//		elementClick("BankManagerLogin");
+//		log.debug("Logged in as Bank Manager");
+//		Reporter.log("Logged in as Bank Manager is successful");
+//		Thread.sleep(3000);
 		elementClick("OpenAccountButton");
 		Thread.sleep(3000);
 		Reporter.log("Navigated to Open Account page");

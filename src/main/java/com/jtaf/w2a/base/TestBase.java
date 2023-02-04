@@ -8,9 +8,9 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
+import org.testng.annotations.AfterSuite;
 import org.testng.annotations.AfterTest;
-
+import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
 
 import com.aventstack.extentreports.ExtentReports;
@@ -36,7 +36,7 @@ public class TestBase extends FileReader {
 	public static ExtentReports report = ExtentReportUtil.getInstance();
 	public static ExtentTest test;
 
-	@BeforeTest
+	@BeforeSuite
 	public static void setUp() {
 
 		FileReader.loadPropertyFiles();
@@ -58,7 +58,7 @@ public class TestBase extends FileReader {
 		log.debug("Driver lauches the application " + getDataFromPropFile("url"));
 	}
 
-	@AfterTest
+	@AfterSuite
 	public static void setDown() {
 
 		if (driver != null) {
