@@ -18,9 +18,6 @@
 			<class name="com.jtaf.w2a.testcases.AddCustomerTest" />
 		</classes>
 	</test>
-	<!-- <test thread-count="1" name="OpenAccountTest">
-		<classes>
-			<class name="com.jtaf.w2a.testcases.OpenAccountTest" />
-		</classes>
-	</test> -->
-</suite> <!-- Suite -->
+	<!-- <test thread-count="1" name="OpenAccountTest"> <classes> <class name="com.jtaf.w2a.testcases.OpenAccountTest" 
+		/> </classes> </test> -->
+</suite>
