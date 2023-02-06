@@ -33,20 +33,28 @@ public class TestBase extends FileReader {
 	public static WebDriverWait wait;
 	public static ExtentReports report = ExtentReportUtil.getInstance();
 	public static ExtentTest test;
+	public static String browser;
 
 	@BeforeSuite
 	public static void setUp() {
 
 		FileReader.loadPropertyFiles();
-		if (getDataFromPropFile("browser").equalsIgnoreCase("Chrome")) {
+		if (System.getenv("Browser") != null & !System.getenv("Browser").isEmpty()) {
+			browser = System.getenv("Browser");
+		} else {
+			browser = getDataFromPropFile("Browser");
+		}
+		properties.setProperty("Browser", browser);
+		if (getDataFromPropFile("Browser").equalsIgnoreCase("Chrome")) {
 			driver = new ChromeDriver();
-			log.debug(getDataFromPropFile("browser") + " driver started");
-		} else if (getDataFromPropFile("browser").equalsIgnoreCase("Firefox")) {
+			log.debug(getDataFromPropFile("Browser") + " driver started");
+		} else if (getDataFromPropFile("Browser").equalsIgnoreCase("Firefox")) {
 			driver = new FirefoxDriver();
-			log.debug(getDataFromPropFile("browser") + " driver started");
-		} else if (getDataFromPropFile("browser").equalsIgnoreCase("Edge")) {
+
+			log.debug(getDataFromPropFile("Browser") + " driver started");
+		} else if (getDataFromPropFile("Browser").equalsIgnoreCase("Edge")) {
 			driver = new EdgeDriver();
-			log.debug(getDataFromPropFile("browser") + " driver started");
+			log.debug(getDataFromPropFile("Browser") + " driver started");
 		}
 		driver.manage().window().maximize();
 		driver.manage().timeouts()
