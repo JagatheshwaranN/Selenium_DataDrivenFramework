@@ -20,7 +20,7 @@ public class AddCustomerTest extends ReusableComponent {
 
 		Class<AddCustomerTest> classObj = AddCustomerTest.class;
 		Method[] methods = classObj.getMethods();
-		if (!TestUtil.isTestRunnable(methods[0].getName(), excelReader)) {
+		if (!TestUtil.isTestRunnable(methods[0].getName(), excelReaderUtil)) {
 			throw new SkipException("Skipping the Test " + methods[0].getName() + " as the RunMode is set to N");
 		}
 		if (!data.get("RunMode").equalsIgnoreCase("Y")) {

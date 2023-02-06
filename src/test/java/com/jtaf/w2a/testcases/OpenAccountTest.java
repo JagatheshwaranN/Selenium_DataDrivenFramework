@@ -20,7 +20,7 @@ public class OpenAccountTest extends ReusableComponent {
 
 		Class<OpenAccountTest> classObj = OpenAccountTest.class;
 		Method[] methods = classObj.getMethods();
-		if (!TestUtil.isTestRunnable(methods[0].getName(), excelReader)) {
+		if (!TestUtil.isTestRunnable(methods[0].getName(), excelReaderUtil)) {
 			throw new SkipException("Skipping the Test " + methods[0].getName() + " as the RunMode is N");
 		}
 //		elementClick("BankManagerLogin");

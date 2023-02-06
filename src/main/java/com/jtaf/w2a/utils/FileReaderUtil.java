@@ -8,7 +8,7 @@ import java.util.Properties;
 
 import org.apache.log4j.Logger;
 
-public class FileReader {
+public class FileReaderUtil {
 
 	public static Logger log = Logger.getLogger("devpinoyLogger");
 

@@ -26,7 +26,7 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 
 @SuppressWarnings("deprecation")
-public class ExcelReader {
+public class ExcelReaderUtil {
 	
 	public  String path;
 	public  FileInputStream fis = null;
@@ -36,7 +36,7 @@ public class ExcelReader {
 	private XSSFRow row   =null;
 	private XSSFCell cell = null;
 	
-	public ExcelReader(String path) {
+	public ExcelReaderUtil(String path) {
 		
 		this.path=path;
 		try {
@@ -502,10 +502,10 @@ public class ExcelReader {
 	public static void main(String arg[]) throws IOException{
 		
 		
-		ExcelReader datatable = null;
+		ExcelReaderUtil datatable = null;
 		
 
-			 datatable = new ExcelReader("C:\\CM3.0\\app\\test\\Framework\\AutomationBvt\\src\\config\\xlfiles\\Controller.xlsx");
+			 datatable = new ExcelReaderUtil("C:\\CM3.0\\app\\test\\Framework\\AutomationBvt\\src\\config\\xlfiles\\Controller.xlsx");
 				for(int col=0 ;col< datatable.getColumnCount("TC5"); col++){
 					System.out.println(datatable.getCellData("TC5", col, 1));
 				}
