@@ -39,7 +39,7 @@ public class TestBase extends FileReaderUtil {
 	public static void setUp() {
 
 		FileReaderUtil.loadPropertyFiles();
-		if (System.getenv("Browser") != null & !System.getenv("Browser").isEmpty()) {
+		if (System.getenv("Browser") != null && !System.getenv("Browser").isEmpty()) {
 			browser = System.getenv("Browser");
 		} else {
 			browser = getDataFromPropFile("Browser");
