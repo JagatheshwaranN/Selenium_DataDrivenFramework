@@ -45,37 +45,31 @@
 			<artifactId>slf4j-simple</artifactId> <version>2.0.6</version> </dependency> 
 			<dependency> <groupId>org.slf4j</groupId> <artifactId>slf4j-nop</artifactId> 
 			<version>2.0.6</version> </dependency> -->
-
 		<!-- POI JARS STARTS -->
-
 		<!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
 		<dependency>
 			<groupId>org.apache.poi</groupId>
 			<artifactId>poi</artifactId>
 			<version>4.1.1</version>
 		</dependency>
-
 		<!-- https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml -->
 		<dependency>
 			<groupId>org.apache.poi</groupId>
 			<artifactId>poi-ooxml</artifactId>
 			<version>4.1.1</version>
 		</dependency>
-
 		<!-- https://mvnrepository.com/artifact/dom4j/dom4j -->
 		<dependency>
 			<groupId>dom4j</groupId>
 			<artifactId>dom4j</artifactId>
 			<version>1.6.1</version>
 		</dependency>
-
 		<!-- https://mvnrepository.com/artifact/org.apache.xmlbeans/xmlbeans -->
 		<dependency>
 			<groupId>org.apache.xmlbeans</groupId>
 			<artifactId>xmlbeans</artifactId>
 			<version>3.1.0</version>
 		</dependency>
-
 		<!-- https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml-schemas -->
 		<dependency>
 			<groupId>org.apache.poi</groupId>
@@ -112,11 +106,15 @@
 			<artifactId>lombok</artifactId>
 			<version>1.18.26</version>
 		</dependency>
-		<!-- https://mvnrepository.com/artifact/javax.mail/javax.mail-api -->
 		<dependency>
-			<groupId>javax.mail</groupId>
-			<artifactId>javax.mail-api</artifactId>
-			<version>1.6.2</version>
+			<groupId>com.sun.mail</groupId>
+			<artifactId>jakarta.mail</artifactId>
+			<version>2.0.1</version>
+		</dependency>
+		<dependency>
+			<groupId>com.sun.activation</groupId>
+			<artifactId>jakarta.activation</artifactId>
+			<version>2.0.1</version>
 		</dependency>
 	</dependencies>
 	<build>

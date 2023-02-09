@@ -20,7 +20,7 @@ import com.jtaf.w2a.utils.FileReaderUtil;
 public class TestBase extends FileReaderUtil {
 
 	/**
-	 * WebDriver Properites Logs ExtentReports DB Excel Mail
+	 * WebDriver Properties Logs ExtentReports DB Excel Mail
 	 * 
 	 */
 
