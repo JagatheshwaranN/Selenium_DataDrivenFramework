@@ -11,6 +11,7 @@ import org.testng.ITestResult;
 import org.testng.Reporter;
 
 import com.aventstack.extentreports.Status;
+import com.aventstack.extentreports.markuputils.Markup;
 import com.jtaf.w2a.common.ReusableComponent;
 import com.jtaf.w2a.utils.EmailConfig;
 import com.jtaf.w2a.utils.EmailTriggerUtil;
@@ -28,7 +29,7 @@ public class ReportListener extends ReusableComponent implements ITestListener, 
 
 		System.setProperty("org.uncommons.reportng.escape-output", "false");
 		test.log(Status.PASS, result.getName().toUpperCase() + " PASS");
-		test.addScreenCaptureFromPath(captureSnapShot());
+		//test.addScreenCaptureFromPath(captureSnapShot()));
 		Reporter.log("<br>");
 		Reporter.log(result.getMethod().getMethodName() + " Test Passed..!!");
 		Reporter.log("<br>");
@@ -40,9 +41,9 @@ public class ReportListener extends ReusableComponent implements ITestListener, 
 
 		System.setProperty("org.uncommons.reportng.escape-output", "false");
 		test.log(Status.FAIL, result.getName().toUpperCase() + " FAIL" + "\n" + result.getThrowable());
-		test.addScreenCaptureFromPath(captureSnapShot());
+		// test.addScreenCaptureFromPath(captureSnapShot());
 		Reporter.log("<br>");
-		Reporter.log(result.getMethod().getMethodName() + " Test Passed..!!");
+		Reporter.log(result.getMethod().getMethodName() + " Test Failed..!!");
 		Reporter.log("<br>");
 		Reporter.log("<a target='_blank' href='" + captureSnapShot() + "'><img src='" + captureSnapShot()
 				+ "' height='100' width='100'/></a>");
