@@ -27,7 +27,7 @@ public class FileReaderUtil {
 			ObjectRepofileInputStream = new FileInputStream(ObjectRepoFileObj);
 			properties.load(configfileInputStream);
 			properties.load(ObjectRepofileInputStream);
-			log.debug("Config & Object Repository property files are loadded !!");
+			log.debug("Config & Object Repository property files are loaded !!");
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		} catch (IOException e) {
@@ -36,16 +36,11 @@ public class FileReaderUtil {
 	}
 
 	public static String getDataFromPropFile(String key) {
+
 		String dataFromPropFile = null;
 		if (key != null && properties != null) {
 			dataFromPropFile = properties.getProperty(key).trim();
 		}
 		return dataFromPropFile;
-	}
-
-	public static void main(String[] args) {
-		loadPropertyFiles();
-		System.out.println(getDataFromPropFile("url"));
-		System.out.println(getDataFromPropFile("BankManagerLogin"));
 	}
 }

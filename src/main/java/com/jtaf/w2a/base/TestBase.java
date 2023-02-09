@@ -61,7 +61,7 @@ public class TestBase extends FileReaderUtil {
 				.implicitlyWait(Duration.ofMillis(Integer.parseInt(getDataFromPropFile("implicit.wait"))));
 		wait = new WebDriverWait(driver, Duration.ofSeconds(5));
 		driver.get(getDataFromPropFile("url"));
-		log.debug("Driver lauches the application " + getDataFromPropFile("url"));
+		log.debug("Driver launches the application " + getDataFromPropFile("url"));
 	}
 
 	@AfterSuite

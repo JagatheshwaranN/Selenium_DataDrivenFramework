@@ -12,9 +12,8 @@ import org.testng.Reporter;
 
 import com.aventstack.extentreports.Status;
 import com.jtaf.w2a.common.ReusableComponent;
-import com.jtaf.w2a.utils.EmailUtil;
-import com.jtaf.w2a.utils.TestConfig;
-import jakarta.mail.MessagingException;
+import com.jtaf.w2a.utils.EmailConfig;
+import com.jtaf.w2a.utils.EmailTriggerUtil;
 
 public class ReportListener extends ReusableComponent implements ITestListener, ISuiteListener {
 
@@ -78,17 +77,14 @@ public class ReportListener extends ReusableComponent implements ITestListener, 
 
 	public void onFinish(ISuite suite) {
 
-		EmailUtil emailUtil = new EmailUtil();
+		EmailTriggerUtil emailTriggerUtil = new EmailTriggerUtil();
 		try {
-			messageBody = "http://" + InetAddress.getLocalHost().getHostAddress()
-					+ ":8081/job/Way2Automation_DataDriven_Project/Extent_20Report/";
-		} catch (UnknownHostException e1) {
-			e1.printStackTrace();
-		}
-		try {
-			emailUtil.sendMail(TestConfig.server, TestConfig.from, TestConfig.to, TestConfig.subject, messageBody);
-		} catch (MessagingException e) {
-			e.printStackTrace();
+			String[] reportPath = getDataFromPropFile("jenkinsAutomationReportPath").split("\\$");
+			messageBody = reportPath[0] + InetAddress.getLocalHost().getHostAddress() + reportPath[1];
+			emailTriggerUtil.sendEmail(EmailConfig.mailServer, EmailConfig.from, EmailConfig.to, EmailConfig.subject,
+					messageBody);
+		} catch (UnknownHostException ex) {
+			ex.printStackTrace();
 		}
 	}
 }
