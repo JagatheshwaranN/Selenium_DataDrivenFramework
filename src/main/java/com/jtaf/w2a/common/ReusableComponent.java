@@ -111,7 +111,7 @@ public class ReusableComponent extends TestBase {
 					+ "' height='100' width='100'/></a>");
 			Reporter.log("<br>");
 			test.log(Status.FAIL, "Verification Failure : " + ex.getMessage());
-			test.addScreenCaptureFromPath(captureSnapShot());
+			//test.addScreenCaptureFromPath(captureSnapShot());
 		}
 	}
 
