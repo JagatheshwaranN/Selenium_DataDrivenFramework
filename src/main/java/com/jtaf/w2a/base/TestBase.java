@@ -76,9 +76,4 @@ public class TestBase extends FileReaderUtil {
 	public WebDriver getDriver() {
         return driver;
     }
-	
-	public static void main(String[] args) {
-		setUp();
-		setDown();
-	}
 }
