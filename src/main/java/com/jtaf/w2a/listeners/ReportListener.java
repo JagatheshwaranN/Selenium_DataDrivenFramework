@@ -6,20 +6,15 @@ import java.util.Objects;
 
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
-import org.openqa.selenium.WebDriver;
 import org.testng.ISuite;
 import org.testng.ISuiteListener;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 import org.testng.Reporter;
-
 import com.aventstack.extentreports.Status;
-import com.aventstack.extentreports.markuputils.Markup;
 import com.jtaf.w2a.base.TestBase;
 import com.jtaf.w2a.common.ReusableComponent;
-import com.jtaf.w2a.utils.EmailConfig;
-import com.jtaf.w2a.utils.EmailTriggerUtil;
 
 public class ReportListener extends ReusableComponent implements ITestListener, ISuiteListener {
 
