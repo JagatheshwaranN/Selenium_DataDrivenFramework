@@ -50,7 +50,6 @@ public class TestBase extends FileReaderUtil {
 			log.debug(getDataFromPropFile("Browser") + " driver started");
 		} else if (getDataFromPropFile("Browser").equalsIgnoreCase("Firefox")) {
 			driver = new FirefoxDriver();
-
 			log.debug(getDataFromPropFile("Browser") + " driver started");
 		} else if (getDataFromPropFile("Browser").equalsIgnoreCase("Edge")) {
 			driver = new EdgeDriver();
@@ -74,6 +73,6 @@ public class TestBase extends FileReaderUtil {
 	}
 
 	public WebDriver getDriver() {
-        return driver;
-    }
+		return driver;
+	}
 }
