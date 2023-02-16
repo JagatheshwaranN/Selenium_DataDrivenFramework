@@ -1,0 +1,43 @@
+<Locators>
+	<HomePage>
+		<BankManagerLogin>
+			<CSS>div:last-child > .btn.btn-primary.btn-lg</CSS>
+		</BankManagerLogin>
+	</HomePage>
+	<ManagerDashboardPage>
+		<AddCustomerButton>
+			<CSS>button[ng-click='addCust()']</CSS>
+		</AddCustomerButton>
+		<OpenAccountButton>
+			<CSS>button[ng-click='openAccount()']</CSS>
+		</OpenAccountButton>
+	</ManagerDashboardPage>
+	<AddCustomerPage>
+		<FirstName>
+			<CSS>input[placeholder='First Name']</CSS>
+		</FirstName>
+		<LastName>
+			<CSS>input[ng-model='lName']</CSS>
+		</LastName>
+		<PostCode>
+			<CSS>input[ng-model='postCd']</CSS>
+		</PostCode>
+		<AddButton>
+			<CSS>.btn.btn-default</CSS>
+		</AddButton>
+	</AddCustomerPage>
+	<OpenAccountPage>
+		<Customer>
+			<CSS>#userSelect</CSS>
+		</Customer>
+		<CustomerSelectOption>
+			<CSS>select[id='userSelect'] > option</CSS>
+		</CustomerSelectOption>
+		<Currency>
+			<CSS>#currency</CSS>
+		</Currency>
+		<ProcessButton>
+			<CSS>button[type='submit']</CSS>
+		</ProcessButton>
+	</OpenAccountPage>
+</Locators>
