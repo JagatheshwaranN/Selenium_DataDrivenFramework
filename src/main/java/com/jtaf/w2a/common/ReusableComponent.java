@@ -32,11 +32,28 @@ public class ReusableComponent extends TestBase {
 		}
 	}
 
+	public static boolean isElementPresentUsingXML(String locator) {
+
+		try {
+			driver.findElement(By.cssSelector(locator));
+			return true;
+		} catch (NoSuchElementException ex) {
+			return false;
+		}
+	}
+
 	public static void elementClick(String key) {
 
 		if (key != null) {
 			driver.findElement(By.cssSelector(getDataFromPropFile(key))).click();
 			test.log(Status.INFO, "Clicked on the " + key);
+		}
+	}
+
+	public static void elementClickUsingXML(String locator) {
+
+		if (locator != null) {
+			driver.findElement(By.cssSelector(locator)).click();
 		}
 	}
 
@@ -111,7 +128,7 @@ public class ReusableComponent extends TestBase {
 					+ "' height='100' width='100'/></a>");
 			Reporter.log("<br>");
 			test.log(Status.FAIL, "Verification Failure : " + ex.getMessage());
-			//test.addScreenCaptureFromPath(captureSnapShot());
+			// test.addScreenCaptureFromPath(captureSnapShot());
 		}
 	}
 
