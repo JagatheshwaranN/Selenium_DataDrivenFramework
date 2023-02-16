@@ -9,20 +9,21 @@ import org.testng.annotations.Test;
 import com.jtaf.w2a.common.ReusableComponent;
 import com.jtaf.w2a.utils.TestUtil;
 
-public class BankManagerLoginTestUsingXML extends ReusableComponent {
+public class BankManagerLoginTestUsingJSON extends ReusableComponent {
 
 	@Test
 	public void bankManagerLoginTest() throws InterruptedException {
 
-		Class<BankManagerLoginTestUsingXML> classObj = BankManagerLoginTestUsingXML.class;
+		Class<BankManagerLoginTestUsingJSON> classObj = BankManagerLoginTestUsingJSON.class;
 		Method[] methods = classObj.getMethods();
 		if (!TestUtil.isTestRunnable(methods[0].getName(), excelReaderUtil)) {
 			throw new SkipException("Skipping the Test " + methods[0].getName() + " as the RunMode is N");
 		}
-		elementClickUsingJSON_XML(xmlReaderUtil.getLocatorFromXML("Locators.HomePage.BankManagerLogin.CSS"));
+		elementClickUsingJSON_XML(jsonReaderUtil.getLocatorFromJSON("locators.homepage.bankManagerLogin.css"));
 		log.debug("Logged in as Bank Manager");
 		Thread.sleep(5000);
-		Assert.assertTrue(isElementPresentUsingJSON_XML(xmlReaderUtil.getLocatorFromXML("AddCustomerButton.CSS")));
+		Assert.assertTrue(isElementPresentUsingJSON_XML(
+				jsonReaderUtil.getLocatorFromJSON("locators.managerDashboardPage.addCustomerButton.css")));
 		log.debug("Add Customer Button is available");
 		Reporter.log("Logged in as Bank Manager is successful");
 	}

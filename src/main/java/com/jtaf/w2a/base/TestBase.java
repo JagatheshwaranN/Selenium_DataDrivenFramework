@@ -16,6 +16,7 @@ import com.aventstack.extentreports.ExtentTest;
 import com.jtaf.w2a.utils.ExcelReaderUtil;
 import com.jtaf.w2a.utils.ExtentReportUtil;
 import com.jtaf.w2a.utils.FileReaderUtil;
+import com.jtaf.w2a.utils.JSONReaderUtil;
 import com.jtaf.w2a.utils.XMLReaderUtil;
 
 public class TestBase extends FileReaderUtil {
@@ -33,6 +34,8 @@ public class TestBase extends FileReaderUtil {
 			System.getProperty("user.dir") + "/src/test/resources/excel/testData.xlsx");
 	public static XMLReaderUtil xmlReaderUtil = new XMLReaderUtil(
 			System.getProperty("user.dir") + "/src/test/resources/properties/objectrepo.xml");
+	public static JSONReaderUtil jsonReaderUtil = new JSONReaderUtil(
+			System.getProperty("user.dir") + "/src/test/resources/properties/objectrepo.json");
 	public static WebDriverWait wait;
 	public static ExtentReports report = ExtentReportUtil.getInstance();
 	public static ExtentTest test;

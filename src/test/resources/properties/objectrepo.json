@@ -1,0 +1,45 @@
+{
+	"locators": {
+		"homepage": {
+			"bankManagerLogin": {
+				"css": "div:last-child > .btn.btn-primary.btn-lg"
+			}
+		},
+		"managerDashboardPage": {
+			"addCustomerButton": {
+				"css": "button[ng-click='addCust()']"
+			},
+			"openAccountButton": {
+				"css": "button[ng-click='openAccount()']"
+			}
+		},
+		"addCustomerPage": {
+			"firstName": {
+				"css": "input[placeholder='First Name']"
+			},
+			"lastName": {
+				"css": "input[ng-model='lName']"
+			},
+			"postCode": {
+				"css": "input[ng-model='postCd']"
+			},
+			"addButton": {
+				"css": ".btn.btn-default"
+			}
+		},
+		"openAccountPage": {
+			"customer": {
+				"css": "#userSelect"
+			},
+			"customerSelectOption": {
+				"css": "select[id='userSelect'] > option"
+			},
+			"currency": {
+				"css": "#currency"
+			},
+			"processButton": {
+				"css": "button[type='submit']"
+			}
+		}
+	}
+}

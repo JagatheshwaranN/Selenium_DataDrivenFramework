@@ -32,7 +32,7 @@ public class ReusableComponent extends TestBase {
 		}
 	}
 
-	public static boolean isElementPresentUsingXML(String locator) {
+	public static boolean isElementPresentUsingJSON_XML(String locator) {
 
 		try {
 			driver.findElement(By.cssSelector(locator));
@@ -50,7 +50,7 @@ public class ReusableComponent extends TestBase {
 		}
 	}
 
-	public static void elementClickUsingXML(String locator) {
+	public static void elementClickUsingJSON_XML(String locator) {
 
 		if (locator != null) {
 			driver.findElement(By.cssSelector(locator)).click();
