@@ -1,12 +1,17 @@
 package com.jtaf.w2a.base;
 
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.time.Duration;
 
 import org.apache.log4j.Logger;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.edge.EdgeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.Platform;
+
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.edge.EdgeOptions;
+import org.openqa.selenium.firefox.FirefoxOptions;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
@@ -16,28 +21,22 @@ import com.aventstack.extentreports.ExtentTest;
 import com.jtaf.w2a.utils.ExcelReaderUtil;
 import com.jtaf.w2a.utils.ExtentReportUtil;
 import com.jtaf.w2a.utils.FileReaderUtil;
-import com.jtaf.w2a.utils.JSONReaderUtil;
-import com.jtaf.w2a.utils.XMLReaderUtil;
 
-public class TestBase extends FileReaderUtil {
+public class TestBaseGrid extends FileReaderUtil {
 
-	public static WebDriver driver;
-
+	public static RemoteWebDriver driver;
+	public static DesiredCapabilities capabilities = new DesiredCapabilities();
 	public static Logger log = Logger.getLogger("devpinoyLogger");
 
 	public static ExcelReaderUtil excelReaderUtil = new ExcelReaderUtil(
 			System.getProperty("user.dir") + "/src/test/resources/excel/testData.xlsx");
-	public static XMLReaderUtil xmlReaderUtil = new XMLReaderUtil(
-			System.getProperty("user.dir") + "/src/test/resources/properties/objectrepo.xml");
-	public static JSONReaderUtil jsonReaderUtil = new JSONReaderUtil(
-			System.getProperty("user.dir") + "/src/test/resources/properties/objectrepo.json");
 	public static WebDriverWait wait;
 	public static ExtentReports report = ExtentReportUtil.getInstance();
 	public static ExtentTest test;
 	public static String browser;
 
 	@BeforeSuite
-	public static void setUp() {
+	public static void setUp() throws MalformedURLException {
 
 		FileReaderUtil.loadPropertyFiles();
 		if (System.getenv("Browser") != null && !System.getenv("Browser").isEmpty()) {
@@ -47,15 +46,22 @@ public class TestBase extends FileReaderUtil {
 		}
 		properties.setProperty("Browser", browser);
 		if (getDataFromPropFile("Browser").equalsIgnoreCase("Chrome")) {
-			driver = new ChromeDriver();
-			log.debug(getDataFromPropFile("Browser") + " driver started");
+			capabilities.setPlatform(Platform.ANY);
+			capabilities.setBrowserName(browser);
+			ChromeOptions options = new ChromeOptions();
+			options.merge(capabilities);
 		} else if (getDataFromPropFile("Browser").equalsIgnoreCase("Firefox")) {
-			driver = new FirefoxDriver();
-			log.debug(getDataFromPropFile("Browser") + " driver started");
+			capabilities.setPlatform(Platform.ANY);
+			capabilities.setBrowserName(browser);
+			FirefoxOptions options = new FirefoxOptions();
+			options.merge(capabilities);
 		} else if (getDataFromPropFile("Browser").equalsIgnoreCase("Edge")) {
-			driver = new EdgeDriver();
-			log.debug(getDataFromPropFile("Browser") + " driver started");
+			capabilities.setPlatform(Platform.ANY);
+			capabilities.setBrowserName("MicrosoftEdge");
+			EdgeOptions options = new EdgeOptions();
+			options.merge(capabilities);
 		}
+		driver = new RemoteWebDriver(new URL("http://192.168.1.5:4444/"), capabilities);
 		driver.manage().window().maximize();
 		driver.manage().timeouts()
 				.implicitlyWait(Duration.ofMillis(Integer.parseInt(getDataFromPropFile("implicit.wait"))));
@@ -71,9 +77,5 @@ public class TestBase extends FileReaderUtil {
 			driver.quit();
 			log.debug("Driver session completed");
 		}
-	}
-
-	public WebDriver getDriver() {
-		return driver;
 	}
 }
