@@ -1,6 +1,6 @@
-16-02-2023 19:02:920 DEBUG devpinoyLogger :30 - Config & Object Repository property files are loaded !!
-16-02-2023 19:02:486 DEBUG devpinoyLogger :56 - Chrome driver started
-16-02-2023 19:02:673 DEBUG devpinoyLogger :69 - Driver launches the application https://www.way2automation.com/angularjs-protractor/banking/#/login
-16-02-2023 19:02:757 DEBUG devpinoyLogger :23 - Logged in as Bank Manager
-16-02-2023 19:02:825 DEBUG devpinoyLogger :27 - Add Customer Button is available
-16-02-2023 19:02:749 DEBUG devpinoyLogger :77 - Driver session completed
+21-02-2023 19:02:352 DEBUG devpinoyLogger :30 - Config & Object Repository property files are loaded !!
+21-02-2023 19:02:569 DEBUG devpinoyLogger :51 - Chrome driver started
+21-02-2023 19:02:799 DEBUG devpinoyLogger :64 - Driver launches the application https://www.way2automation.com/angularjs-protractor/banking/#/login
+21-02-2023 19:02:791 DEBUG devpinoyLogger :24 - Logged in as Bank Manager
+21-02-2023 19:02:818 DEBUG devpinoyLogger :27 - Add Customer Button is available
+21-02-2023 19:02:669 DEBUG devpinoyLogger :72 - Driver session completed

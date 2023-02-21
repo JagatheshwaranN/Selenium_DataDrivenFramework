@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+    <line>
+      <![CDATA[<br> Verification Failure : expected [XYZ Bank] but found [ABC Bank]<br>]]>
+    </line>
+    <line>
+      <![CDATA[<a target='_blank' href='D:\Environment_Collection\Eclipse_Env\Workspace\SeleniumDataDrivenFramework\src\test\resources\screenshots\success\21_02_2023_07_42_52.png'><img src='D:\Environment_Collection\Eclipse_Env\Workspace\SeleniumDataDrivenFramework\src\test\resources\screenshots\success\21_02_2023_07_42_52.png' height='100' width='100'/></a>]]>
+    </line>
+    <line>
+      <![CDATA[<br>]]>
+    </line>
+    <line>
+      <![CDATA[Logged in as Bank Manager is successful]]>
+    </line>
+    <line>
+      <![CDATA[<br>]]>
+    </line>
+    <line>
+      <![CDATA[bankManagerLoginTest Test Passed..!!]]>
+    </line>
+    <line>
+      <![CDATA[<br>]]>
+    </line>
+    <line>
+      <![CDATA[<a target='_blank' href='D:\Environment_Collection\Eclipse_Env\Workspace\SeleniumDataDrivenFramework\src\test\resources\screenshots\success\21_02_2023_07_42_57.png'><img src='D:\Environment_Collection\Eclipse_Env\Workspace\SeleniumDataDrivenFramework\src\test\resources\screenshots\success\21_02_2023_07_42_57.png' height='100' width='100'/></a>]]>
+    </line>
+  </reporter-output>
+  <suite started-at="2023-02-21T19:42:51 IST" name="Data Driven Test Automation" finished-at="2023-02-21T19:42:58 IST" duration-ms="6273">
+    <groups>
+    </groups>
+    <test started-at="2023-02-21T19:42:51 IST" name="BankManagerLoginTest" finished-at="2023-02-21T19:42:58 IST" duration-ms="6273">
+      <class name="com.jtaf.w2a.testcases.BankManagerLoginTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.jtaf.w2a.testcases.BankManagerLoginTest@2f2bf0e2]" started-at="2023-02-21T19:42:36 IST" name="setUp" finished-at="2023-02-21T19:42:51 IST" duration-ms="15484" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="bankManagerLoginTest()[pri:0, instance:com.jtaf.w2a.testcases.BankManagerLoginTest@2f2bf0e2]" started-at="2023-02-21T19:42:51 IST" name="bankManagerLoginTest" finished-at="2023-02-21T19:42:57 IST" duration-ms="5907" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[<br> Verification Failure : expected [XYZ Bank] but found [ABC Bank]<br>]]>
+            </line>
+            <line>
+              <![CDATA[<a target='_blank' href='D:\Environment_Collection\Eclipse_Env\Workspace\SeleniumDataDrivenFramework\src\test\resources\screenshots\success\21_02_2023_07_42_52.png'><img src='D:\Environment_Collection\Eclipse_Env\Workspace\SeleniumDataDrivenFramework\src\test\resources\screenshots\success\21_02_2023_07_42_52.png' height='100' width='100'/></a>]]>
+            </line>
+            <line>
+              <![CDATA[<br>]]>
+            </line>
+            <line>
+              <![CDATA[Logged in as Bank Manager is successful]]>
+            </line>
+            <line>
+              <![CDATA[<br>]]>
+            </line>
+            <line>
+              <![CDATA[bankManagerLoginTest Test Passed..!!]]>
+            </line>
+            <line>
+              <![CDATA[<br>]]>
+            </line>
+            <line>
+              <![CDATA[<a target='_blank' href='D:\Environment_Collection\Eclipse_Env\Workspace\SeleniumDataDrivenFramework\src\test\resources\screenshots\success\21_02_2023_07_42_57.png'><img src='D:\Environment_Collection\Eclipse_Env\Workspace\SeleniumDataDrivenFramework\src\test\resources\screenshots\success\21_02_2023_07_42_57.png' height='100' width='100'/></a>]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- bankManagerLoginTest -->
+        <test-method is-config="true" signature="setDown()[pri:0, instance:com.jtaf.w2a.testcases.BankManagerLoginTest@2f2bf0e2]" started-at="2023-02-21T19:43:00 IST" name="setDown" finished-at="2023-02-21T19:43:00 IST" duration-ms="585" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setDown -->
+      </class> <!-- com.jtaf.w2a.testcases.BankManagerLoginTest -->
+    </test> <!-- BankManagerLoginTest -->
+  </suite> <!-- Data Driven Test Automation -->
+</testng-results>
