@@ -12,7 +12,7 @@ import com.jtaf.w2a.utils.TestUtil;
 public class BankManagerLoginTestGrid extends ReusableComponentGrid {
 
 	@Test
-	public void bankManagerLoginTest() throws InterruptedException {
+	public void bankManagerLoginTestGrid() throws InterruptedException {
 
 		Class<BankManagerLoginTestGrid> classObj = BankManagerLoginTestGrid.class;
 		Method[] methods = classObj.getMethods();

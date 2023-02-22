@@ -17,7 +17,7 @@ import com.jtaf.w2a.utils.TestUtilGrid;
 public class OpenAccountTestGrid extends ReusableComponentGrid {
 
 	@Test(dataProviderClass = TestUtilGrid.class, dataProvider = "dataFetch")
-	public static void openAccountTest(Hashtable<String, String> data) throws InterruptedException {
+	public static void openAccountTestGrid(Hashtable<String, String> data) throws InterruptedException {
 
 		Class<OpenAccountTestGrid> classObj = OpenAccountTestGrid.class;
 		Method[] methods = classObj.getMethods();
