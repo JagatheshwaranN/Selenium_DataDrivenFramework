@@ -11,7 +11,6 @@ import org.testng.SkipException;
 import org.testng.annotations.Test;
 
 import com.jtaf.w2a.common.ReusableComponentGrid;
-import com.jtaf.w2a.utils.TestUtil;
 import com.jtaf.w2a.utils.TestUtilGrid;
 
 public class AddCustomerTestGrid extends ReusableComponentGrid {
@@ -21,7 +20,7 @@ public class AddCustomerTestGrid extends ReusableComponentGrid {
 
 		Class<AddCustomerTestGrid> classObj = AddCustomerTestGrid.class;
 		Method[] methods = classObj.getMethods();
-		if (!TestUtil.isTestRunnable(methods[0].getName(), excelReaderUtil)) {
+		if (!TestUtilGrid.isTestRunnable(methods[0].getName(), excelReaderUtil)) {
 			throw new SkipException("Skipping the Test " + methods[0].getName() + " as the RunMode is set to N");
 		}
 		if (!data.get("RunMode").equalsIgnoreCase("Y")) {
@@ -43,6 +42,7 @@ public class AddCustomerTestGrid extends ReusableComponentGrid {
 		Assert.assertTrue(alertObj.getText().contains(data.get("SuccessMessage")));
 		alertObj.accept();
 		Thread.sleep(3000);
+		elementClick("HomeButton");
 		Reporter.log("Add Customer is successful");
 	}
 }

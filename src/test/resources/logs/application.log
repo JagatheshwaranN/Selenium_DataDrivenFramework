@@ -1,6 +1,16 @@
-21-02-2023 19:02:352 DEBUG devpinoyLogger :30 - Config & Object Repository property files are loaded !!
-21-02-2023 19:02:569 DEBUG devpinoyLogger :51 - Chrome driver started
-21-02-2023 19:02:799 DEBUG devpinoyLogger :64 - Driver launches the application https://www.way2automation.com/angularjs-protractor/banking/#/login
-21-02-2023 19:02:791 DEBUG devpinoyLogger :24 - Logged in as Bank Manager
-21-02-2023 19:02:818 DEBUG devpinoyLogger :27 - Add Customer Button is available
-21-02-2023 19:02:669 DEBUG devpinoyLogger :72 - Driver session completed
+22-02-2023 13:02:847 DEBUG devpinoyLogger :30 - Config & Object Repository property files are loaded !!
+22-02-2023 13:02:475 DEBUG devpinoyLogger :90 - Driver launches the application https://www.way2automation.com/angularjs-protractor/banking/#/login
+22-02-2023 13:02:827 DEBUG devpinoyLogger :23 - Logged in as Bank Manager
+22-02-2023 13:02:967 DEBUG devpinoyLogger :26 - Add Customer Button is available
+22-02-2023 13:02:196 DEBUG devpinoyLogger :98 - Driver session completed
+22-02-2023 13:02:390 DEBUG devpinoyLogger :30 - Config & Object Repository property files are loaded !!
+22-02-2023 13:02:526 DEBUG devpinoyLogger :90 - Driver launches the application https://www.way2automation.com/angularjs-protractor/banking/#/login
+22-02-2023 13:02:697 DEBUG devpinoyLogger :30 - Logged in as Bank Manager
+22-02-2023 13:02:608 DEBUG devpinoyLogger :30 - Logged in as Bank Manager
+22-02-2023 13:02:480 DEBUG devpinoyLogger :30 - Logged in as Bank Manager
+22-02-2023 13:02:594 DEBUG devpinoyLogger :98 - Driver session completed
+22-02-2023 13:02:771 DEBUG devpinoyLogger :30 - Config & Object Repository property files are loaded !!
+22-02-2023 13:02:150 DEBUG devpinoyLogger :90 - Driver launches the application https://www.way2automation.com/angularjs-protractor/banking/#/login
+22-02-2023 13:02:341 DEBUG devpinoyLogger :27 - Logged in as Bank Manager
+22-02-2023 13:02:703 DEBUG devpinoyLogger :27 - Logged in as Bank Manager
+22-02-2023 13:02:898 DEBUG devpinoyLogger :98 - Driver session completed

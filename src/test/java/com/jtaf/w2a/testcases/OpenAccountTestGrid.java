@@ -11,7 +11,6 @@ import org.testng.SkipException;
 import org.testng.annotations.Test;
 
 import com.jtaf.w2a.common.ReusableComponentGrid;
-import com.jtaf.w2a.utils.TestUtil;
 import com.jtaf.w2a.utils.TestUtilGrid;
 
 public class OpenAccountTestGrid extends ReusableComponentGrid {
@@ -21,7 +20,7 @@ public class OpenAccountTestGrid extends ReusableComponentGrid {
 
 		Class<OpenAccountTestGrid> classObj = OpenAccountTestGrid.class;
 		Method[] methods = classObj.getMethods();
-		if (!TestUtil.isTestRunnable(methods[0].getName(), excelReaderUtil)) {
+		if (!TestUtilGrid.isTestRunnable(methods[0].getName(), excelReaderUtil)) {
 			throw new SkipException("Skipping the Test " + methods[0].getName() + " as the RunMode is N");
 		}
 		elementClick("BankManagerLogin");
@@ -39,6 +38,7 @@ public class OpenAccountTestGrid extends ReusableComponentGrid {
 		Assert.assertTrue(alertObj.getText().contains(data.get("SuccessMessage")));
 		alertObj.accept();
 		Thread.sleep(3000);
+		elementClick("HomeButton");
 		Reporter.log("Open Account is successful");
 	}
 }

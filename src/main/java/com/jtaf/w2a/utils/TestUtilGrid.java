@@ -44,7 +44,7 @@ public class TestUtilGrid extends ReusableComponentGrid {
 
 	public static boolean isTestRunnable(String testName, ExcelReaderUtil excel) {
 
-		String sheetName = getDataFromPropFile("suiteSheet");
+		String sheetName = getDataFromPropFile("suiteGridSheet");
 		String testCaseColumn = getDataFromPropFile("testColumn");
 		String runTypeColumn = getDataFromPropFile("runColumn");
 		int rows = excel.getRowCount(sheetName);

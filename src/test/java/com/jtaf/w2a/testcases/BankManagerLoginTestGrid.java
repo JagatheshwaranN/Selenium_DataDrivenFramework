@@ -7,7 +7,7 @@ import org.testng.Reporter;
 import org.testng.SkipException;
 import org.testng.annotations.Test;
 import com.jtaf.w2a.common.ReusableComponentGrid;
-import com.jtaf.w2a.utils.TestUtil;
+import com.jtaf.w2a.utils.TestUtilGrid;
 
 public class BankManagerLoginTestGrid extends ReusableComponentGrid {
 
@@ -16,7 +16,7 @@ public class BankManagerLoginTestGrid extends ReusableComponentGrid {
 
 		Class<BankManagerLoginTestGrid> classObj = BankManagerLoginTestGrid.class;
 		Method[] methods = classObj.getMethods();
-		if (!TestUtil.isTestRunnable(methods[0].getName(), excelReaderUtil)) {
+		if (!TestUtilGrid.isTestRunnable(methods[0].getName(), excelReaderUtil)) {
 			throw new SkipException("Skipping the Test " + methods[0].getName() + " as the RunMode is N");
 		}
 		elementClick("BankManagerLogin");
