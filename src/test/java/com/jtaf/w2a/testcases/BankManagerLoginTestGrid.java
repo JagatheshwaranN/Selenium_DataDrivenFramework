@@ -6,10 +6,10 @@ import org.testng.Assert;
 import org.testng.Reporter;
 import org.testng.SkipException;
 import org.testng.annotations.Test;
-import com.jtaf.w2a.common.ReusableComponent;
+import com.jtaf.w2a.common.ReusableComponentGrid;
 import com.jtaf.w2a.utils.TestUtil;
 
-public class BankManagerLoginTestGrid extends ReusableComponent {
+public class BankManagerLoginTestGrid extends ReusableComponentGrid {
 
 	@Test
 	public void bankManagerLoginTest() throws InterruptedException {

@@ -10,12 +10,13 @@ import org.testng.Reporter;
 import org.testng.SkipException;
 import org.testng.annotations.Test;
 
-import com.jtaf.w2a.common.ReusableComponent;
+import com.jtaf.w2a.common.ReusableComponentGrid;
 import com.jtaf.w2a.utils.TestUtil;
+import com.jtaf.w2a.utils.TestUtilGrid;
 
-public class OpenAccountTestGrid extends ReusableComponent {
+public class OpenAccountTestGrid extends ReusableComponentGrid {
 
-	@Test(dataProviderClass = TestUtil.class, dataProvider = "dataFetch")
+	@Test(dataProviderClass = TestUtilGrid.class, dataProvider = "dataFetch")
 	public static void openAccountTest(Hashtable<String, String> data) throws InterruptedException {
 
 		Class<OpenAccountTestGrid> classObj = OpenAccountTestGrid.class;
