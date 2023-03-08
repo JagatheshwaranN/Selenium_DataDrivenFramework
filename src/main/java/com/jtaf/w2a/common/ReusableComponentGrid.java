@@ -107,7 +107,7 @@ public class ReusableComponentGrid extends TestBaseGrid {
 		// System.out.println(cal.get(Calendar.DATE)+"_"+(cal.get(Calendar.MONTH)+1)+"_"+cal.get(Calendar.YEAR));
 		SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd_MM_YYYY_hh_mm_ss");
 		File source = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-		File destination = new File(System.getProperty("user.dir") + "/src/test/resources/screenshots/success/"
+		File destination = new File(System.getProperty("user.dir") + "/src/test/resources/screenshots/"
 				+ simpleDateFormat.format(calendar.getTime()) + ".png");
 		try {
 			FileUtils.copyFile(source, destination);
